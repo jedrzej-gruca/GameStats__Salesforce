@@ -5,6 +5,7 @@
       <configuration>
         <option name="connectionName" value="BachelorsProject" />
         <option name="connectionType" value="OAUTH" />
+        <option name="defaultSourceRootUrl" value="file://$MODULE_DIR$/src/main/default" />
         <option name="moduleContents">
           <ModuleContents>
             <option name="contentSelectionType" value="PACKAGE_XML" />
@@ -22,6 +23,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/default" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.sf" />
       <excludeFolder url="file://$MODULE_DIR$/.sfdx" />
+      <excludeFolder url="file://$MODULE_DIR$/src/utils" />
     </content>
     <orderEntry type="jdk" jdkName="IlluminatedCloud (GameStats/BachelorsProject)" jdkType="IlluminatedCloud" />
     <orderEntry type="sourceFolder" forTests="false" />

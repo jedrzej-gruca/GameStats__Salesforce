@@ -93,5 +93,13 @@
         <members>fflib_security_error_object_not_updateable</members>
         <name>CustomLabel</name>
     </types>
+    <types>
+        <members>BP_GameStatsHome</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>BP_GameStatsApp</members>
+        <name>CustomApplication</name>
+    </types>
     <version>58.0</version>
 </Package>
