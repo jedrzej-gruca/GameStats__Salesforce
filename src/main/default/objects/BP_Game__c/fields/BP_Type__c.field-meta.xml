@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_Type__c</fullName>
+    <description>Type of the game</description>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abstracts</fullName>
+                <default>false</default>
+                <label>Abstracts</label>
+            </value>
+            <value>
+                <fullName>Customisable Games</fullName>
+                <default>false</default>
+                <label>Customisable Games</label>
+            </value>
+            <value>
+                <fullName>Children&apos;s Games</fullName>
+                <default>false</default>
+                <label>Children&apos;s Games</label>
+            </value>
+            <value>
+                <fullName>Family Games</fullName>
+                <default>false</default>
+                <label>Family Games</label>
+            </value>
+            <value>
+                <fullName>Party Games</fullName>
+                <default>false</default>
+                <label>Party Games</label>
+            </value>
+            <value>
+                <fullName>Strategy Games</fullName>
+                <default>false</default>
+                <label>Strategy Games</label>
+            </value>
+            <value>
+                <fullName>Thematic Games</fullName>
+                <default>false</default>
+                <label>Thematic Games</label>
+            </value>
+            <value>
+                <fullName>Wargames</fullName>
+                <default>false</default>
+                <label>Wargames</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

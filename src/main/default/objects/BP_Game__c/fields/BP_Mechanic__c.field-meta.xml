@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_Mechanic__c</fullName>
+    <externalId>false</externalId>
+    <label>Mechanic</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acting</fullName>
+                <default>false</default>
+                <label>Acting</label>
+            </value>
+            <value>
+                <fullName>Action Drafting</fullName>
+                <default>false</default>
+                <label>Action Drafting</label>
+            </value>
+            <value>
+                <fullName>Action Points</fullName>
+                <default>false</default>
+                <label>Action Points</label>
+            </value>
+            <value>
+                <fullName>Action Queue</fullName>
+                <default>false</default>
+                <label>Action Queue</label>
+            </value>
+            <value>
+                <fullName>Action Retrieval</fullName>
+                <default>false</default>
+                <label>Action Retrieval</label>
+            </value>
+            <value>
+                <fullName>Action Timer</fullName>
+                <default>false</default>
+                <label>Action Timer</label>
+            </value>
+            <value>
+                <fullName>Action/Event</fullName>
+                <default>false</default>
+                <label>Action/Event</label>
+            </value>
+            <value>
+                <fullName>Advantage Token</fullName>
+                <default>false</default>
+                <label>Advantage Token</label>
+            </value>
+            <value>
+                <fullName>Alliances</fullName>
+                <default>false</default>
+                <label>Alliances</label>
+            </value>
+            <value>
+                <fullName>Area Majority / Influence</fullName>
+                <default>false</default>
+                <label>Area Majority / Influence</label>
+            </value>
+            <value>
+                <fullName>Area Movement</fullName>
+                <default>false</default>
+                <label>Area Movement</label>
+            </value>
+            <value>
+                <fullName>Area-Impulse</fullName>
+                <default>false</default>
+                <label>Area-Impulse</label>
+            </value>
+            <value>
+                <fullName>Auction Compensation</fullName>
+                <default>false</default>
+                <label>Auction Compensation</label>
+            </value>
+            <value>
+                <fullName>Auction: Dexterity</fullName>
+                <default>false</default>
+                <label>Auction: Dexterity</label>
+            </value>
+            <value>
+                <fullName>Auction: Dutch</fullName>
+                <default>false</default>
+                <label>Auction: Dutch</label>
+            </value>
+            <value>
+                <fullName>Auction: Dutch Priority</fullName>
+                <default>false</default>
+                <label>Auction: Dutch Priority</label>
+            </value>
+            <value>
+                <fullName>Auction: English</fullName>
+                <default>false</default>
+                <label>Auction: English</label>
+            </value>
+            <value>
+                <fullName>Auction: Fixed Placement</fullName>
+                <default>false</default>
+                <label>Auction: Fixed Placement</label>
+            </value>
+            <value>
+                <fullName>Auction: Multiple Lot</fullName>
+                <default>false</default>
+                <label>Auction: Multiple Lot</label>
+            </value>
+            <value>
+                <fullName>Auction: Once Around</fullName>
+                <default>false</default>
+                <label>Auction: Once Around</label>
+            </value>
+            <value>
+                <fullName>Auction: Sealed Bid</fullName>
+                <default>false</default>
+                <label>Auction: Sealed Bid</label>
+            </value>
+            <value>
+                <fullName>Auction: Turn Order Until Pass</fullName>
+                <default>false</default>
+                <label>Auction: Turn Order Until Pass</label>
+            </value>
+            <value>
+                <fullName>Auction/Bidding</fullName>
+                <default>false</default>
+                <label>Auction/Bidding</label>
+            </value>
+            <value>
+                <fullName>Automatic Resource Growth</fullName>
+                <default>false</default>
+                <label>Automatic Resource Growth</label>
+            </value>
+            <value>
+                <fullName>Betting and Bluffing</fullName>
+                <default>false</default>
+                <label>Betting and Bluffing</label>
+            </value>
+            <value>
+                <fullName>Bias</fullName>
+                <default>false</default>
+                <label>Bias</label>
+            </value>
+            <value>
+                <fullName>Bids As Wagers</fullName>
+                <default>false</default>
+                <label>Bids As Wagers</label>
+            </value>
+            <value>
+                <fullName>Bingo</fullName>
+                <default>false</default>
+                <label>Bingo</label>
+            </value>
+            <value>
+                <fullName>Bribery</fullName>
+                <default>false</default>
+                <label>Bribery</label>
+            </value>
+            <value>
+                <fullName>Campaign / Battle Card Driven</fullName>
+                <default>false</default>
+                <label>Campaign / Battle Card Driven</label>
+            </value>
+            <value>
+                <fullName>Card Play Conflict Resolution</fullName>
+                <default>false</default>
+                <label>Card Play Conflict Resolution</label>
+            </value>
+            <value>
+                <fullName>Catch the Leader</fullName>
+                <default>false</default>
+                <label>Catch the Leader</label>
+            </value>
+            <value>
+                <fullName>Chaining</fullName>
+                <default>false</default>
+                <label>Chaining</label>
+            </value>
+            <value>
+                <fullName>Chit-Pull System</fullName>
+                <default>false</default>
+                <label>Chit-Pull System</label>
+            </value>
+            <value>
+                <fullName>Closed Drafting</fullName>
+                <default>false</default>
+                <label>Closed Drafting</label>
+            </value>
+            <value>
+                <fullName>Closed Economy Auction</fullName>
+                <default>false</default>
+                <label>Closed Economy Auction</label>
+            </value>
+            <value>
+                <fullName>Command Cards</fullName>
+                <default>false</default>
+                <label>Command Cards</label>
+            </value>
+            <value>
+                <fullName>Commodity Speculation</fullName>
+                <default>false</default>
+                <label>Commodity Speculation</label>
+            </value>
+            <value>
+                <fullName>Communication Limits</fullName>
+                <default>false</default>
+                <label>Communication Limits</label>
+            </value>
+            <value>
+                <fullName>Connections</fullName>
+                <default>false</default>
+                <label>Connections</label>
+            </value>
+            <value>
+                <fullName>Constrained Bidding</fullName>
+                <default>false</default>
+                <label>Constrained Bidding</label>
+            </value>
+            <value>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+                <label>Contracts</label>
+            </value>
+            <value>
+                <fullName>Cooperative Game</fullName>
+                <default>false</default>
+                <label>Cooperative Game</label>
+            </value>
+            <value>
+                <fullName>Crayon Rail System</fullName>
+                <default>false</default>
+                <label>Crayon Rail System</label>
+            </value>
+            <value>
+                <fullName>Critical Hits and Failures</fullName>
+                <default>false</default>
+                <label>Critical Hits and Failures</label>
+            </value>
+            <value>
+                <fullName>Cube Tower</fullName>
+                <default>false</default>
+                <label>Cube Tower</label>
+            </value>
+            <value>
+                <fullName>Deck Construction</fullName>
+                <default>false</default>
+                <label>Deck Construction</label>
+            </value>
+            <value>
+                <fullName>Deck, Bag, and Pool Building</fullName>
+                <default>false</default>
+                <label>Deck, Bag, and Pool Building</label>
+            </value>
+            <value>
+                <fullName>Deduction</fullName>
+                <default>false</default>
+                <label>Deduction</label>
+            </value>
+            <value>
+                <fullName>Delayed Purchase</fullName>
+                <default>false</default>
+                <label>Delayed Purchase</label>
+            </value>
+            <value>
+                <fullName>Dice Rolling</fullName>
+                <default>false</default>
+                <label>Dice Rolling</label>
+            </value>
+            <value>
+                <fullName>Die Icon Resolution</fullName>
+                <default>false</default>
+                <label>Die Icon Resolution</label>
+            </value>
+            <value>
+                <fullName>Different Dice Movement</fullName>
+                <default>false</default>
+                <label>Different Dice Movement</label>
+            </value>
+            <value>
+                <fullName>Drawing</fullName>
+                <default>false</default>
+                <label>Drawing</label>
+            </value>
+            <value>
+                <fullName>Elapsed Real Time Ending</fullName>
+                <default>false</default>
+                <label>Elapsed Real Time Ending</label>
+            </value>
+            <value>
+                <fullName>Enclosure</fullName>
+                <default>false</default>
+                <label>Enclosure</label>
+            </value>
+            <value>
+                <fullName>End Game Bonuses</fullName>
+                <default>false</default>
+                <label>End Game Bonuses</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Finale Ending</fullName>
+                <default>false</default>
+                <label>Finale Ending</label>
+            </value>
+            <value>
+                <fullName>Flicking</fullName>
+                <default>false</default>
+                <label>Flicking</label>
+            </value>
+            <value>
+                <fullName>Follow</fullName>
+                <default>false</default>
+                <label>Follow</label>
+            </value>
+            <value>
+                <fullName>Force Commitment</fullName>
+                <default>false</default>
+                <label>Force Commitment</label>
+            </value>
+            <value>
+                <fullName>Grid Coverage</fullName>
+                <default>false</default>
+                <label>Grid Coverage</label>
+            </value>
+            <value>
+                <fullName>Grid Movement</fullName>
+                <default>false</default>
+                <label>Grid Movement</label>
+            </value>
+            <value>
+                <fullName>Hand Management</fullName>
+                <default>false</default>
+                <label>Hand Management</label>
+            </value>
+            <value>
+                <fullName>Hexagon Grid</fullName>
+                <default>false</default>
+                <label>Hexagon Grid</label>
+            </value>
+            <value>
+                <fullName>Hidden Movement</fullName>
+                <default>false</default>
+                <label>Hidden Movement</label>
+            </value>
+            <value>
+                <fullName>Hidden Roles</fullName>
+                <default>false</default>
+                <label>Hidden Roles</label>
+            </value>
+            <value>
+                <fullName>Hidden Victory Points</fullName>
+                <default>false</default>
+                <label>Hidden Victory Points</label>
+            </value>
+            <value>
+                <fullName>Highest-Lowest Scoring</fullName>
+                <default>false</default>
+                <label>Highest-Lowest Scoring</label>
+            </value>
+            <value>
+                <fullName>Hot Potato</fullName>
+                <default>false</default>
+                <label>Hot Potato</label>
+            </value>
+            <value>
+                <fullName>I Cut, You Choose</fullName>
+                <default>false</default>
+                <label>I Cut, You Choose</label>
+            </value>
+            <value>
+                <fullName>Impulse Movement</fullName>
+                <default>false</default>
+                <label>Impulse Movement</label>
+            </value>
+            <value>
+                <fullName>Income</fullName>
+                <default>false</default>
+                <label>Income</label>
+            </value>
+            <value>
+                <fullName>Increase Value of Unchosen Resources</fullName>
+                <default>false</default>
+                <label>Increase Value of Unchosen Resources</label>
+            </value>
+            <value>
+                <fullName>Induction</fullName>
+                <default>false</default>
+                <label>Induction</label>
+            </value>
+            <value>
+                <fullName>Interrupts</fullName>
+                <default>false</default>
+                <label>Interrupts</label>
+            </value>
+            <value>
+                <fullName>Investment</fullName>
+                <default>false</default>
+                <label>Investment</label>
+            </value>
+            <value>
+                <fullName>Kill Steal</fullName>
+                <default>false</default>
+                <label>Kill Steal</label>
+            </value>
+            <value>
+                <fullName>King of the Hill</fullName>
+                <default>false</default>
+                <label>King of the Hill</label>
+            </value>
+            <value>
+                <fullName>Ladder Climbing</fullName>
+                <default>false</default>
+                <label>Ladder Climbing</label>
+            </value>
+            <value>
+                <fullName>Layering</fullName>
+                <default>false</default>
+                <label>Layering</label>
+            </value>
+            <value>
+                <fullName>Legacy Game</fullName>
+                <default>false</default>
+                <label>Legacy Game</label>
+            </value>
+            <value>
+                <fullName>Line Drawing</fullName>
+                <default>false</default>
+                <label>Line Drawing</label>
+            </value>
+            <value>
+                <fullName>Line of Sight</fullName>
+                <default>false</default>
+                <label>Line of Sight</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Lose a Turn</fullName>
+                <default>false</default>
+                <label>Lose a Turn</label>
+            </value>
+            <value>
+                <fullName>Mancala</fullName>
+                <default>false</default>
+                <label>Mancala</label>
+            </value>
+            <value>
+                <fullName>Map Addition</fullName>
+                <default>false</default>
+                <label>Map Addition</label>
+            </value>
+            <value>
+                <fullName>Map Deformation</fullName>
+                <default>false</default>
+                <label>Map Deformation</label>
+            </value>
+            <value>
+                <fullName>Map Reduction</fullName>
+                <default>false</default>
+                <label>Map Reduction</label>
+            </value>
+            <value>
+                <fullName>Market</fullName>
+                <default>false</default>
+                <label>Market</label>
+            </value>
+            <value>
+                <fullName>Matching</fullName>
+                <default>false</default>
+                <label>Matching</label>
+            </value>
+            <value>
+                <fullName>Measurement Movement</fullName>
+                <default>false</default>
+                <label>Measurement Movement</label>
+            </value>
+            <value>
+                <fullName>Melding and Splaying</fullName>
+                <default>false</default>
+                <label>Melding and Splaying</label>
+            </value>
+            <value>
+                <fullName>Memory</fullName>
+                <default>false</default>
+                <label>Memory</label>
+            </value>
+            <value>
+                <fullName>Minimap Resolution</fullName>
+                <default>false</default>
+                <label>Minimap Resolution</label>
+            </value>
+            <value>
+                <fullName>Modular Board</fullName>
+                <default>false</default>
+                <label>Modular Board</label>
+            </value>
+            <value>
+                <fullName>Move Through Deck</fullName>
+                <default>false</default>
+                <label>Move Through Deck</label>
+            </value>
+            <value>
+                <fullName>Movement Points</fullName>
+                <default>false</default>
+                <label>Movement Points</label>
+            </value>
+            <value>
+                <fullName>Movement Template</fullName>
+                <default>false</default>
+                <label>Movement Template</label>
+            </value>
+            <value>
+                <fullName>Moving Multiple Units</fullName>
+                <default>false</default>
+                <label>Moving Multiple Units</label>
+            </value>
+            <value>
+                <fullName>Multi-Use Cards</fullName>
+                <default>false</default>
+                <label>Multi-Use Cards</label>
+            </value>
+            <value>
+                <fullName>Multiple Maps</fullName>
+                <default>false</default>
+                <label>Multiple Maps</label>
+            </value>
+            <value>
+                <fullName>Narrative Choice / Paragraph</fullName>
+                <default>false</default>
+                <label>Narrative Choice / Paragraph</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>Neighbor Scope</fullName>
+                <default>false</default>
+                <label>Neighbor Scope</label>
+            </value>
+            <value>
+                <fullName>Network and Route Building</fullName>
+                <default>false</default>
+                <label>Network and Route Building</label>
+            </value>
+            <value>
+                <fullName>Once-Per-Game Abilities</fullName>
+                <default>false</default>
+                <label>Once-Per-Game Abilities</label>
+            </value>
+            <value>
+                <fullName>Open Drafting</fullName>
+                <default>false</default>
+                <label>Open Drafting</label>
+            </value>
+            <value>
+                <fullName>Order Counters</fullName>
+                <default>false</default>
+                <label>Order Counters</label>
+            </value>
+            <value>
+                <fullName>Ordering</fullName>
+                <default>false</default>
+                <label>Ordering</label>
+            </value>
+            <value>
+                <fullName>Ownership</fullName>
+                <default>false</default>
+                <label>Ownership</label>
+            </value>
+            <value>
+                <fullName>Paper-and-Pencil</fullName>
+                <default>false</default>
+                <label>Paper-and-Pencil</label>
+            </value>
+            <value>
+                <fullName>Passed Action Token</fullName>
+                <default>false</default>
+                <label>Passed Action Token</label>
+            </value>
+            <value>
+                <fullName>Pattern Building</fullName>
+                <default>false</default>
+                <label>Pattern Building</label>
+            </value>
+            <value>
+                <fullName>Pattern Movement</fullName>
+                <default>false</default>
+                <label>Pattern Movement</label>
+            </value>
+            <value>
+                <fullName>Pattern Recognition</fullName>
+                <default>false</default>
+                <label>Pattern Recognition</label>
+            </value>
+            <value>
+                <fullName>Physical Removal</fullName>
+                <default>false</default>
+                <label>Physical Removal</label>
+            </value>
+            <value>
+                <fullName>Pick-up and Deliver</fullName>
+                <default>false</default>
+                <label>Pick-up and Deliver</label>
+            </value>
+            <value>
+                <fullName>Pieces as Map</fullName>
+                <default>false</default>
+                <label>Pieces as Map</label>
+            </value>
+            <value>
+                <fullName>Player Elimination</fullName>
+                <default>false</default>
+                <label>Player Elimination</label>
+            </value>
+            <value>
+                <fullName>Player Judge</fullName>
+                <default>false</default>
+                <label>Player Judge</label>
+            </value>
+            <value>
+                <fullName>Point to Point Movement</fullName>
+                <default>false</default>
+                <label>Point to Point Movement</label>
+            </value>
+            <value>
+                <fullName>Predictive Bid</fullName>
+                <default>false</default>
+                <label>Predictive Bid</label>
+            </value>
+            <value>
+                <fullName>Prisoner&apos;s Dilemma</fullName>
+                <default>false</default>
+                <label>Prisoner&apos;s Dilemma</label>
+            </value>
+            <value>
+                <fullName>Programmed Movement</fullName>
+                <default>false</default>
+                <label>Programmed Movement</label>
+            </value>
+            <value>
+                <fullName>Push Your Luck</fullName>
+                <default>false</default>
+                <label>Push Your Luck</label>
+            </value>
+            <value>
+                <fullName>Questions and Answers</fullName>
+                <default>false</default>
+                <label>Questions and Answers</label>
+            </value>
+            <value>
+                <fullName>Race</fullName>
+                <default>false</default>
+                <label>Race</label>
+            </value>
+            <value>
+                <fullName>Random Production</fullName>
+                <default>false</default>
+                <label>Random Production</label>
+            </value>
+            <value>
+                <fullName>Ratio / Combat Results Table</fullName>
+                <default>false</default>
+                <label>Ratio / Combat Results Table</label>
+            </value>
+            <value>
+                <fullName>Re-rolling and Locking</fullName>
+                <default>false</default>
+                <label>Re-rolling and Locking</label>
+            </value>
+            <value>
+                <fullName>Real-Time</fullName>
+                <default>false</default>
+                <label>Real-Time</label>
+            </value>
+            <value>
+                <fullName>Relative Movement</fullName>
+                <default>false</default>
+                <label>Relative Movement</label>
+            </value>
+            <value>
+                <fullName>Resource Queue</fullName>
+                <default>false</default>
+                <label>Resource Queue</label>
+            </value>
+            <value>
+                <fullName>Resource to Move</fullName>
+                <default>false</default>
+                <label>Resource to Move</label>
+            </value>
+            <value>
+                <fullName>Rock-Paper-Scissors</fullName>
+                <default>false</default>
+                <label>Rock-Paper-Scissors</label>
+            </value>
+            <value>
+                <fullName>Role Playing</fullName>
+                <default>false</default>
+                <label>Role Playing</label>
+            </value>
+            <value>
+                <fullName>Roles with Asymmetric Information</fullName>
+                <default>false</default>
+                <label>Roles with Asymmetric Information</label>
+            </value>
+            <value>
+                <fullName>Roll / Spin and Move</fullName>
+                <default>false</default>
+                <label>Roll / Spin and Move</label>
+            </value>
+            <value>
+                <fullName>Rondel</fullName>
+                <default>false</default>
+                <label>Rondel</label>
+            </value>
+            <value>
+                <fullName>Scenario / Mission / Campaign Game</fullName>
+                <default>false</default>
+                <label>Scenario / Mission / Campaign Game</label>
+            </value>
+            <value>
+                <fullName>Score-and-Reset Game</fullName>
+                <default>false</default>
+                <label>Score-and-Reset Game</label>
+            </value>
+            <value>
+                <fullName>Secret Unit Deployment</fullName>
+                <default>false</default>
+                <label>Secret Unit Deployment</label>
+            </value>
+            <value>
+                <fullName>Selection Order Bid</fullName>
+                <default>false</default>
+                <label>Selection Order Bid</label>
+            </value>
+            <value>
+                <fullName>Semi-Cooperative Game</fullName>
+                <default>false</default>
+                <label>Semi-Cooperative Game</label>
+            </value>
+            <value>
+                <fullName>Set Collection</fullName>
+                <default>false</default>
+                <label>Set Collection</label>
+            </value>
+            <value>
+                <fullName>Simulation</fullName>
+                <default>false</default>
+                <label>Simulation</label>
+            </value>
+            <value>
+                <fullName>Simultaneous Action Selection</fullName>
+                <default>false</default>
+                <label>Simultaneous Action Selection</label>
+            </value>
+            <value>
+                <fullName>Singing</fullName>
+                <default>false</default>
+                <label>Singing</label>
+            </value>
+            <value>
+                <fullName>Single Loser Game</fullName>
+                <default>false</default>
+                <label>Single Loser Game</label>
+            </value>
+            <value>
+                <fullName>Slide/Push</fullName>
+                <default>false</default>
+                <label>Slide/Push</label>
+            </value>
+            <value>
+                <fullName>Solo / Solitaire Game</fullName>
+                <default>false</default>
+                <label>Solo / Solitaire Game</label>
+            </value>
+            <value>
+                <fullName>Speed Matching</fullName>
+                <default>false</default>
+                <label>Speed Matching</label>
+            </value>
+            <value>
+                <fullName>Square Grid</fullName>
+                <default>false</default>
+                <label>Square Grid</label>
+            </value>
+            <value>
+                <fullName>Stacking and Balancing</fullName>
+                <default>false</default>
+                <label>Stacking and Balancing</label>
+            </value>
+            <value>
+                <fullName>Stat Check Resolution</fullName>
+                <default>false</default>
+                <label>Stat Check Resolution</label>
+            </value>
+            <value>
+                <fullName>Static Capture</fullName>
+                <default>false</default>
+                <label>Static Capture</label>
+            </value>
+            <value>
+                <fullName>Stock Holding</fullName>
+                <default>false</default>
+                <label>Stock Holding</label>
+            </value>
+            <value>
+                <fullName>Storytelling</fullName>
+                <default>false</default>
+                <label>Storytelling</label>
+            </value>
+            <value>
+                <fullName>Sudden Death Ending</fullName>
+                <default>false</default>
+                <label>Sudden Death Ending</label>
+            </value>
+            <value>
+                <fullName>Tags</fullName>
+                <default>false</default>
+                <label>Tags</label>
+            </value>
+            <value>
+                <fullName>Take That</fullName>
+                <default>false</default>
+                <label>Take That</label>
+            </value>
+            <value>
+                <fullName>Targeted Clues</fullName>
+                <default>false</default>
+                <label>Targeted Clues</label>
+            </value>
+            <value>
+                <fullName>Team-Based Game</fullName>
+                <default>false</default>
+                <label>Team-Based Game</label>
+            </value>
+            <value>
+                <fullName>Tech Trees / Tech Tracks</fullName>
+                <default>false</default>
+                <label>Tech Trees / Tech Tracks</label>
+            </value>
+            <value>
+                <fullName>Three Dimensional Movement</fullName>
+                <default>false</default>
+                <label>Three Dimensional Movement</label>
+            </value>
+            <value>
+                <fullName>Tile Placement</fullName>
+                <default>false</default>
+                <label>Tile Placement</label>
+            </value>
+            <value>
+                <fullName>Track Movement</fullName>
+                <default>false</default>
+                <label>Track Movement</label>
+            </value>
+            <value>
+                <fullName>Trading</fullName>
+                <default>false</default>
+                <label>Trading</label>
+            </value>
+            <value>
+                <fullName>Traitor Game</fullName>
+                <default>false</default>
+                <label>Traitor Game</label>
+            </value>
+            <value>
+                <fullName>Trick-taking</fullName>
+                <default>false</default>
+                <label>Trick-taking</label>
+            </value>
+            <value>
+                <fullName>Tug of War</fullName>
+                <default>false</default>
+                <label>Tug of War</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Auction</fullName>
+                <default>false</default>
+                <label>Turn Order: Auction</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Claim Action</fullName>
+                <default>false</default>
+                <label>Turn Order: Claim Action</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Pass Order</fullName>
+                <default>false</default>
+                <label>Turn Order: Pass Order</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Progressive</fullName>
+                <default>false</default>
+                <label>Turn Order: Progressive</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Random</fullName>
+                <default>false</default>
+                <label>Turn Order: Random</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Role Order</fullName>
+                <default>false</default>
+                <label>Turn Order: Role Order</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Stat-Based</fullName>
+                <default>false</default>
+                <label>Turn Order: Stat-Based</label>
+            </value>
+            <value>
+                <fullName>Turn Order: Time Track</fullName>
+                <default>false</default>
+                <label>Turn Order: Time Track</label>
+            </value>
+            <value>
+                <fullName>Variable Phase Order</fullName>
+                <default>false</default>
+                <label>Variable Phase Order</label>
+            </value>
+            <value>
+                <fullName>Variable Player Powers</fullName>
+                <default>false</default>
+                <label>Variable Player Powers</label>
+            </value>
+            <value>
+                <fullName>Variable Set-up</fullName>
+                <default>false</default>
+                <label>Variable Set-up</label>
+            </value>
+            <value>
+                <fullName>Victory Points as a Resource</fullName>
+                <default>false</default>
+                <label>Victory Points as a Resource</label>
+            </value>
+            <value>
+                <fullName>Voting</fullName>
+                <default>false</default>
+                <label>Voting</label>
+            </value>
+            <value>
+                <fullName>Worker Placement</fullName>
+                <default>false</default>
+                <label>Worker Placement</label>
+            </value>
+            <value>
+                <fullName>Worker Placement with Dice Workers</fullName>
+                <default>false</default>
+                <label>Worker Placement with Dice Workers</label>
+            </value>
+            <value>
+                <fullName>Worker Placement, Different Worker Types</fullName>
+                <default>false</default>
+                <label>Worker Placement, Different Worker Types</label>
+            </value>
+            <value>
+                <fullName>Zone of Control</fullName>
+                <default>false</default>
+                <label>Zone of Control</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

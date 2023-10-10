@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abstract Strategy</fullName>
+                <default>false</default>
+                <label>Abstract Strategy</label>
+            </value>
+            <value>
+                <fullName>Action / Dexterity</fullName>
+                <default>false</default>
+                <label>Action / Dexterity</label>
+            </value>
+            <value>
+                <fullName>Adventure</fullName>
+                <default>false</default>
+                <label>Adventure</label>
+            </value>
+            <value>
+                <fullName>Age of Reason</fullName>
+                <default>false</default>
+                <label>Age of Reason</label>
+            </value>
+            <value>
+                <fullName>American Civil War</fullName>
+                <default>false</default>
+                <label>American Civil War</label>
+            </value>
+            <value>
+                <fullName>American Indian Wars</fullName>
+                <default>false</default>
+                <label>American Indian Wars</label>
+            </value>
+            <value>
+                <fullName>American Revolutionary War</fullName>
+                <default>false</default>
+                <label>American Revolutionary War</label>
+            </value>
+            <value>
+                <fullName>American West</fullName>
+                <default>false</default>
+                <label>American West</label>
+            </value>
+            <value>
+                <fullName>Ancient</fullName>
+                <default>false</default>
+                <label>Ancient</label>
+            </value>
+            <value>
+                <fullName>Animals</fullName>
+                <default>false</default>
+                <label>Animals</label>
+            </value>
+            <value>
+                <fullName>Arabian</fullName>
+                <default>false</default>
+                <label>Arabian</label>
+            </value>
+            <value>
+                <fullName>Aviation / Flight</fullName>
+                <default>false</default>
+                <label>Aviation / Flight</label>
+            </value>
+            <value>
+                <fullName>Bluffing</fullName>
+                <default>false</default>
+                <label>Bluffing</label>
+            </value>
+            <value>
+                <fullName>Book</fullName>
+                <default>false</default>
+                <label>Book</label>
+            </value>
+            <value>
+                <fullName>Card Game</fullName>
+                <default>false</default>
+                <label>Card Game</label>
+            </value>
+            <value>
+                <fullName>Children&apos;s Game</fullName>
+                <default>false</default>
+                <label>Children&apos;s Game</label>
+            </value>
+            <value>
+                <fullName>City Building</fullName>
+                <default>false</default>
+                <label>City Building</label>
+            </value>
+            <value>
+                <fullName>Civil War</fullName>
+                <default>false</default>
+                <label>Civil War</label>
+            </value>
+            <value>
+                <fullName>Civilization</fullName>
+                <default>false</default>
+                <label>Civilization</label>
+            </value>
+            <value>
+                <fullName>Collectible Components</fullName>
+                <default>false</default>
+                <label>Collectible Components</label>
+            </value>
+            <value>
+                <fullName>Comic Book / Strip</fullName>
+                <default>false</default>
+                <label>Comic Book / Strip</label>
+            </value>
+            <value>
+                <fullName>Deduction</fullName>
+                <default>false</default>
+                <label>Deduction</label>
+            </value>
+            <value>
+                <fullName>Dice</fullName>
+                <default>false</default>
+                <label>Dice</label>
+            </value>
+            <value>
+                <fullName>Economic</fullName>
+                <default>false</default>
+                <label>Economic</label>
+            </value>
+            <value>
+                <fullName>Educational</fullName>
+                <default>false</default>
+                <label>Educational</label>
+            </value>
+            <value>
+                <fullName>Electronic</fullName>
+                <default>false</default>
+                <label>Electronic</label>
+            </value>
+            <value>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+                <label>Environmental</label>
+            </value>
+            <value>
+                <fullName>Expansion for Base-game</fullName>
+                <default>false</default>
+                <label>Expansion for Base-game</label>
+            </value>
+            <value>
+                <fullName>Exploration</fullName>
+                <default>false</default>
+                <label>Exploration</label>
+            </value>
+            <value>
+                <fullName>Fan Expansion</fullName>
+                <default>false</default>
+                <label>Fan Expansion</label>
+            </value>
+            <value>
+                <fullName>Fantasy</fullName>
+                <default>false</default>
+                <label>Fantasy</label>
+            </value>
+            <value>
+                <fullName>Farming</fullName>
+                <default>false</default>
+                <label>Farming</label>
+            </value>
+            <value>
+                <fullName>Fighting</fullName>
+                <default>false</default>
+                <label>Fighting</label>
+            </value>
+            <value>
+                <fullName>Game System</fullName>
+                <default>false</default>
+                <label>Game System</label>
+            </value>
+            <value>
+                <fullName>Horror</fullName>
+                <default>false</default>
+                <label>Horror</label>
+            </value>
+            <value>
+                <fullName>Humor</fullName>
+                <default>false</default>
+                <label>Humor</label>
+            </value>
+            <value>
+                <fullName>Industry / Manufacturing</fullName>
+                <default>false</default>
+                <label>Industry / Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Korean War</fullName>
+                <default>false</default>
+                <label>Korean War</label>
+            </value>
+            <value>
+                <fullName>Mafia</fullName>
+                <default>false</default>
+                <label>Mafia</label>
+            </value>
+            <value>
+                <fullName>Math</fullName>
+                <default>false</default>
+                <label>Math</label>
+            </value>
+            <value>
+                <fullName>Mature / Adult</fullName>
+                <default>false</default>
+                <label>Mature / Adult</label>
+            </value>
+            <value>
+                <fullName>Maze</fullName>
+                <default>false</default>
+                <label>Maze</label>
+            </value>
+            <value>
+                <fullName>Medical</fullName>
+                <default>false</default>
+                <label>Medical</label>
+            </value>
+            <value>
+                <fullName>Medieval</fullName>
+                <default>false</default>
+                <label>Medieval</label>
+            </value>
+            <value>
+                <fullName>Memory</fullName>
+                <default>false</default>
+                <label>Memory</label>
+            </value>
+            <value>
+                <fullName>Miniatures</fullName>
+                <default>false</default>
+                <label>Miniatures</label>
+            </value>
+            <value>
+                <fullName>Modern Warfare</fullName>
+                <default>false</default>
+                <label>Modern Warfare</label>
+            </value>
+            <value>
+                <fullName>Movies / TV / Radio theme</fullName>
+                <default>false</default>
+                <label>Movies / TV / Radio theme</label>
+            </value>
+            <value>
+                <fullName>Murder/Mystery</fullName>
+                <default>false</default>
+                <label>Murder/Mystery</label>
+            </value>
+            <value>
+                <fullName>Music</fullName>
+                <default>false</default>
+                <label>Music</label>
+            </value>
+            <value>
+                <fullName>Mythology</fullName>
+                <default>false</default>
+                <label>Mythology</label>
+            </value>
+            <value>
+                <fullName>Napoleonic</fullName>
+                <default>false</default>
+                <label>Napoleonic</label>
+            </value>
+            <value>
+                <fullName>Nautical</fullName>
+                <default>false</default>
+                <label>Nautical</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>Novel-based</fullName>
+                <default>false</default>
+                <label>Novel-based</label>
+            </value>
+            <value>
+                <fullName>Number</fullName>
+                <default>false</default>
+                <label>Number</label>
+            </value>
+            <value>
+                <fullName>Party Game</fullName>
+                <default>false</default>
+                <label>Party Game</label>
+            </value>
+            <value>
+                <fullName>Pike and Shot</fullName>
+                <default>false</default>
+                <label>Pike and Shot</label>
+            </value>
+            <value>
+                <fullName>Pirates</fullName>
+                <default>false</default>
+                <label>Pirates</label>
+            </value>
+            <value>
+                <fullName>Political</fullName>
+                <default>false</default>
+                <label>Political</label>
+            </value>
+            <value>
+                <fullName>Post-Napoleonic</fullName>
+                <default>false</default>
+                <label>Post-Napoleonic</label>
+            </value>
+            <value>
+                <fullName>Prehistoric</fullName>
+                <default>false</default>
+                <label>Prehistoric</label>
+            </value>
+            <value>
+                <fullName>Print &amp; Play</fullName>
+                <default>false</default>
+                <label>Print &amp; Play</label>
+            </value>
+            <value>
+                <fullName>Puzzle</fullName>
+                <default>false</default>
+                <label>Puzzle</label>
+            </value>
+            <value>
+                <fullName>Racing</fullName>
+                <default>false</default>
+                <label>Racing</label>
+            </value>
+            <value>
+                <fullName>Real-time</fullName>
+                <default>false</default>
+                <label>Real-time</label>
+            </value>
+            <value>
+                <fullName>Religious</fullName>
+                <default>false</default>
+                <label>Religious</label>
+            </value>
+            <value>
+                <fullName>Renaissance</fullName>
+                <default>false</default>
+                <label>Renaissance</label>
+            </value>
+            <value>
+                <fullName>Science Fiction</fullName>
+                <default>false</default>
+                <label>Science Fiction</label>
+            </value>
+            <value>
+                <fullName>Space Exploration</fullName>
+                <default>false</default>
+                <label>Space Exploration</label>
+            </value>
+            <value>
+                <fullName>Spies/Secret Agents</fullName>
+                <default>false</default>
+                <label>Spies/Secret Agents</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Territory Building</fullName>
+                <default>false</default>
+                <label>Territory Building</label>
+            </value>
+            <value>
+                <fullName>Trains</fullName>
+                <default>false</default>
+                <label>Trains</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Trivia</fullName>
+                <default>false</default>
+                <label>Trivia</label>
+            </value>
+            <value>
+                <fullName>Video Game Theme</fullName>
+                <default>false</default>
+                <label>Video Game Theme</label>
+            </value>
+            <value>
+                <fullName>Vietnam War</fullName>
+                <default>false</default>
+                <label>Vietnam War</label>
+            </value>
+            <value>
+                <fullName>Wargame</fullName>
+                <default>false</default>
+                <label>Wargame</label>
+            </value>
+            <value>
+                <fullName>Word Game</fullName>
+                <default>false</default>
+                <label>Word Game</label>
+            </value>
+            <value>
+                <fullName>World War I</fullName>
+                <default>false</default>
+                <label>World War I</label>
+            </value>
+            <value>
+                <fullName>World War II</fullName>
+                <default>false</default>
+                <label>World War II</label>
+            </value>
+            <value>
+                <fullName>Zombies</fullName>
+                <default>false</default>
+                <label>Zombies</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

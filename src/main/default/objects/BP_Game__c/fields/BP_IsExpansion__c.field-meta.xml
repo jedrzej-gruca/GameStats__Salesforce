@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_IsExpansion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True if game is expansion to another game</description>
+    <externalId>false</externalId>
+    <label>Is Expansion</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

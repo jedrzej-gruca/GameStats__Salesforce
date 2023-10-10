@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTestSuite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>BP_Author__c</members>
+        <members>BP_CollectionItem__c</members>
+        <members>BP_GameAuthor__c</members>
+        <members>BP_Game__c</members>
+        <members>BP_GameplayPlayer__c</members>
+        <members>BP_Gameplay__c</members>
+        <members>BP_Player__c</members>
+        <members>BP_Score__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>BP_Author__c-en_US</members>
+        <members>BP_CollectionItem__c-en_US</members>
+        <members>BP_GameAuthor__c-en_US</members>
+        <members>BP_Game__c-en_US</members>
+        <members>BP_GameplayPlayer__c-en_US</members>
+        <members>BP_Gameplay__c-en_US</members>
+        <members>BP_Player__c-en_US</members>
+        <members>BP_Score__c-en_US</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>BP_Author__c</members>
+        <members>BP_CollectionItem__c</members>
+        <members>BP_GameAuthor__c</members>
+        <members>BP_Game__c</members>
+        <members>BP_GameplayPlayer__c</members>
+        <members>BP_Gameplay__c</members>
+        <members>BP_Player__c</members>
+        <members>BP_Score__c</members>
+        <name>TopicsForObjects</name>
+    </types>
+    <types>
+        <members>BP_Author__c-Author Layout</members>
+        <members>BP_CollectionItem__c-Collection Item Layout</members>
+        <members>BP_GameAuthor__c-Game Author Layout</members>
+        <members>BP_Game__c-Game Layout</members>
+        <members>BP_GameplayPlayer__c-Gameplay Player Layout</members>
+        <members>BP_Gameplay__c-Game Play Layout</members>
+        <members>BP_Player__c-Player Layout</members>
+        <members>BP_Score__c-Score Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>fflib_QueryFactory_crossobject_fieldsets_not_allowed_error</members>
+        <members>fflib_QueryFactory_fieldset_wrong_sobject_error</members>
+        <members>fflib_QueryFactory_recursive_subquery_error</members>
+        <members>fflib_QueryFactory_subquery_invalid_relationship</members>
+        <members>fflib_security_error_field_not_insertable</members>
+        <members>fflib_security_error_field_not_readable</members>
+        <members>fflib_security_error_field_not_updateable</members>
+        <members>fflib_security_error_object_not_deletable</members>
+        <members>fflib_security_error_object_not_insertable</members>
+        <members>fflib_security_error_object_not_readable</members>
+        <members>fflib_security_error_object_not_updateable</members>
+        <name>CustomLabel</name>
+    </types>
+    <version>58.0</version>
+</Package>
