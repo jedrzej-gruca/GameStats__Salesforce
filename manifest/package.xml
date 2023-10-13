@@ -95,11 +95,20 @@
     </types>
     <types>
         <members>BP_GameStatsHome</members>
+        <members>Games</members>
         <name>FlexiPage</name>
     </types>
     <types>
         <members>BP_GameStatsApp</members>
         <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Games</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>BP_AdministratorPermissions</members>
+        <name>PermissionSet</name>
     </types>
     <version>58.0</version>
 </Package>
