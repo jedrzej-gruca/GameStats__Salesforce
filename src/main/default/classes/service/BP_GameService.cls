@@ -14,10 +14,10 @@ public with sharing class BP_GameService implements BP_IGameService {
         Integer maxPlaytime;
         Integer age;
         String description;
-        String boardgameMechanic;
-        String boardgameCategory;
         String boardgameDesigner;
-        String boardgameSubdomain;
+        List<String> boardgameMechanic;
+        List<String> boardgameCategory;
+        List<String> boardgameSubdomain;
     }
 
     public static BP_GameService newInstance() {
@@ -77,14 +77,22 @@ public with sharing class BP_GameService implements BP_IGameService {
         final List<GameWrapper> boardGames = new List<GameWrapper>();
         for(Dom.XmlNode game : games.getChildElements()) {
             final GameWrapper gameWrapper = new GameWrapper();
+            final List<String> subdomains = new List<String>();
+            final List<String> categories = new List<String>();
+            final List<String> mechanics = new List<String>();
             gameWrapper.bggId = Integer.valueOf(game.getAttribute(BP_Constants.BOARDGAME_NODE_ATTRIBUTE_NAME, null));
-            for (Dom.XmlNode name : game.getChildElements()) {
-                if (name.getName().contains(BP_Constants.NAME_SUBNODE_NAME)) {
-                    if (name.getAttribute(BP_Constants.NAME_SUBNODE_ATTRIBUTE_NAME, null) == 'true') {
-                        System.debug(name.getText());
-                        gameWrapper.name = name.getText();
-                        break;
+            for (Dom.XmlNode subNode : game.getChildElements()) {
+                if (subNode.getName().contains(BP_Constants.NAME_SUBNODE_NAME)) {
+                    if (subNode.getAttribute(BP_Constants.NAME_SUBNODE_ATTRIBUTE_NAME, null) == 'true') {
+                        System.debug(subNode.getText());
+                        gameWrapper.name = subNode.getText();
                     }
+                } else if (subNode.getName().contains(BP_Constants.BOARDGAME_SUBDOMAIN_SUBNODE_NAME)) {
+                    subdomains.add(subNode.getText());
+                } else if (subNode.getName().contains(BP_Constants.BOARDGAME_CATEGORY_SUBNODE_NAME)) {
+                    categories.add(subNode.getText());
+                } else if (subNode.getName().contains(BP_Constants.BOARDGAME_MECHANIC_SUBNODE_NAME)) {
+                    mechanics.add(subNode.getText());
                 }
             }
             gameWrapper.yearPublished = Integer.valueOf(game.getChildElement(BP_Constants.YEAR_PUBLISHED_SUBNODE_NAME, null).getText());
@@ -95,9 +103,9 @@ public with sharing class BP_GameService implements BP_IGameService {
             gameWrapper.age = Integer.valueOf(game.getChildElement(BP_Constants.AGE_SUBNODE_NAME, null).getText());
             gameWrapper.description = game.getChildElement(BP_Constants.DESCRIPTION_SUBNODE_NAME, null).getText();
             gameWrapper.boardgameDesigner = game.getChildElement(BP_Constants.BOARDGAME_DESIGNER_SUBNODE_NAME, null).getText();
-            gameWrapper.boardgameSubdomain = game.getChildElement(BP_Constants.BOARDGAME_SUBDOMAIN_SUBNODE_NAME, null).getText();
-            gameWrapper.boardgameCategory = game.getChildElement(BP_Constants.BOARDGAME_CATEGORY_SUBNODE_NAME, null).getText();
-            gameWrapper.boardgameMechanic = game.getChildElement(BP_Constants.BOARDGAME_MECHANIC_SUBNODE_NAME, null).getText();
+            gameWrapper.boardgameSubdomain = subdomains;
+            gameWrapper.boardgameCategory = categories;
+            gameWrapper.boardgameMechanic = mechanics;
             boardGames.add(gameWrapper);
         }
         return boardGames;
