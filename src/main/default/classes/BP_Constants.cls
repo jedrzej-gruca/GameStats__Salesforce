@@ -7,12 +7,12 @@ public with sharing class BP_Constants {
      * @description BGG API Http request types
      */
     public static final String SEARCH_HTTP_REQUEST_TYPE = 'search?search=';
-    public static final String GAME_HTTP_REQUEST_TYPE = 'game/';
+    public static final String GAME_HTTP_REQUEST_TYPE = 'boardgame/';
 
     /**
      * @description BGG API endpoint
      */
-    public static final String BGG_ENDPOINT = 'https://boardgamegeek.com/xmlapi/';
+    public static final String BGG_ENDPOINT = 'https://api.geekdo.com/xmlapi/';
 
     /**
      * @description BGG API XML node names
