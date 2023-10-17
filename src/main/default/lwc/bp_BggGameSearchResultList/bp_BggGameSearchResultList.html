@@ -1,0 +1,22 @@
+<!--
+ - Created by drzeju on 15/10/2023.
+ -->
+
+<!-- Bp BGG Game Search Result List -->
+<template>
+    <div class="slds-p-bottom_medium increased-height">
+        <template if:true={isLoading}>
+            <lightning-spinner size="medium"></lightning-spinner>
+        </template>
+        <lightning-input
+                label="Podaj nazwę gry: "
+                placeholder="Wpisz nazwę gry..."
+                name="gameName"
+                onchange={handleGameNameChange}
+        ></lightning-input>
+        <p class="slds-text-body_small slds-text-color_error slds-m-top_x-small" if:false= {isGameFound}>Nie znaleziono żadnej gry o podanej nazwie</p>
+    </div>
+    <div class="slds-text-align_right">
+        <lightning-button variant="brand" onclick={handleSearchGame} label="Wyszukaj"></lightning-button>
+    </div>
+</template>

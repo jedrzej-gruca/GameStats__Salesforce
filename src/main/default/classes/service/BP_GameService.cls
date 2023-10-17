@@ -54,12 +54,12 @@ public with sharing class BP_GameService implements BP_IGameService {
         return response;
     }
 
-    public Map<String, String> parseSearchResponse(final HttpResponse response) {
+    public Map<Integer, String> parseSearchResponse(final HttpResponse response) {
         final Dom.Document gameList = response.getBodyDocument();
-        final Map<String, String> gameIdToGameNameMap = new Map<String, String>();
+        final Map<Integer, String> gameIdToGameNameMap = new Map<Integer, String>();
         Dom.XmlNode games = gameList.getRootElement();
         for (Dom.XmlNode game : games.getChildElements()) {
-            final String gameId = game.getAttribute(BP_Constants.BOARDGAME_NODE_ATTRIBUTE_NAME, null);
+            final Integer gameId = Integer.valueOf(game.getAttribute(BP_Constants.BOARDGAME_NODE_ATTRIBUTE_NAME, null));
             final String gameName = game.getChildElement(BP_Constants.NAME_SUBNODE_NAME, null).getText();
             gameIdToGameNameMap.put(gameId, gameName);
         }
@@ -116,7 +116,7 @@ public with sharing class BP_GameService implements BP_IGameService {
         String prepareSearchEndpoint(String gameName);
         String prepareSingleGameRecordEndpoint(Integer bggGameId);
         HttpResponse executeCallout(HttpRequest request);
-        Map<String, String> parseSearchResponse(HttpResponse response);
+        Map<Integer, String> parseSearchResponse(HttpResponse response);
         List<GameWrapper> parseResponseDomToGame(HttpResponse response);
     }
 }

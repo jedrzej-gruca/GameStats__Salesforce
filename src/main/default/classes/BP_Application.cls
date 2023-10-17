@@ -18,7 +18,7 @@ public with sharing class BP_Application {
             );
 
     public without sharing class WithoutSharingUowManager {
-        private fflib_ISObjectUnitOfWork uow;
+        private final fflib_ISObjectUnitOfWork uow;
         public WithoutSharingUowManager(fflib_ISObjectUnitOfWork uow) {
             this.uow = uow;
         }
