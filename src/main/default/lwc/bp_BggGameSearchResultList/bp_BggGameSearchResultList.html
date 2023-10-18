@@ -1,5 +1,5 @@
 <!--
- - Created by drzeju on 15/10/2023.
+ - Created by Jedrzej Gruca on 15/10/2023.
  -->
 
 <!-- Bp BGG Game Search Result List -->
@@ -19,4 +19,35 @@
     <div class="slds-text-align_right">
         <lightning-button variant="brand" onclick={handleSearchGame} label="Wyszukaj"></lightning-button>
     </div>
+    <hr class="slds-m-bottom_small">
+
+    <template if:true={dataLoaded}>
+        <lightning-card icon-name="custom:custom47" title={searchResultListName}>
+            <lightning-spinner if:true={isLoading} size="medium"></lightning-spinner>
+            <div class="slds-m-around_medium">
+                <div class="slds-box slds-theme_alt-inverse slds-text-color_inverse-weak slds-p-around_medium">
+                    <p class="slds-m-bottom_medium">Poniżej znajdują się wyniki wyszukiwania gier dla danego zapytania.</p>
+                    <p>Wybierz jeden tytuł, dla którego chcesz utworzyć kartę gry, a następnie naciśnij przycisk <strong>"Dalej"</strong> znajdujący się na dole strony"</p>
+                </div>
+            </div>
+            <div class="slds-m-horizontal_xxx-small">
+                <p class="slds-p-left_small" if:false={noGames}>Wybierz:</p>
+                <lightning-layout if:false={noGames} multiple-rows="true">
+                    <template for:each={data} for:item="game">
+                        <lightning-layout-item key={game.bbgId} flexibility="grow" size="12">
+                            <div class="slds-box box-focusable slds-m-around_xx-small" onclick={handleGameChoice} data-id={game.bbgId}>
+                                <p class="slds-text-title">Id: <strong>{game.bggId}</strong></p>
+                                <p class="slds-text-title">Nazwa: <strong>{game.name}</strong></p>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </div>
+        </lightning-card>
+        <hr class="slds-m-bottom_small">
+        <div class="slds-clearfix slds-p-bottom_medium">
+            <lightning-button label="Wstecz" class="slds-float_right" onclick={handleGoBack} if:false={isFlowContinued}></lightning-button>
+            <lightning-button label="Zakończ kreator" variant="brand-outline" class="slds-float_right" onclick={handleQuit} if:true= {isFlowContinued}></lightning-button>
+        </div>
+    </template>
 </template>

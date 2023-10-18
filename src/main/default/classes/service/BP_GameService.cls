@@ -5,8 +5,10 @@
 public with sharing class BP_GameService implements BP_IGameService {
 
     public class GameWrapper {
-        String name;
-        Integer bggId;
+        @AuraEnabled
+        public String name { get; set;}
+        @AuraEnabled
+        public Integer bggId { get; set;}
         Integer yearPublished;
         Integer minPlayers;
         Integer maxPlayers;
@@ -54,19 +56,20 @@ public with sharing class BP_GameService implements BP_IGameService {
         return response;
     }
 
-    public Map<Integer, String> parseSearchResponse(final HttpResponse response) {
+    public List<GameWrapper> parseSearchResponse(final HttpResponse response) {
         final Dom.Document gameList = response.getBodyDocument();
-        final Map<Integer, String> gameIdToGameNameMap = new Map<Integer, String>();
+        final List<GameWrapper> retrievedGames = new List<GameWrapper>();
         Dom.XmlNode games = gameList.getRootElement();
         for (Dom.XmlNode game : games.getChildElements()) {
-            final Integer gameId = Integer.valueOf(game.getAttribute(BP_Constants.BOARDGAME_NODE_ATTRIBUTE_NAME, null));
-            final String gameName = game.getChildElement(BP_Constants.NAME_SUBNODE_NAME, null).getText();
-            gameIdToGameNameMap.put(gameId, gameName);
+            GameWrapper gw = new GameWrapper();
+            gw.bggId = Integer.valueOf(game.getAttribute(BP_Constants.BOARDGAME_NODE_ATTRIBUTE_NAME, null));
+            gw.name = game.getChildElement(BP_Constants.NAME_SUBNODE_NAME, null).getText();
+            retrievedGames.add(gw);
         }
-        if (gameIdToGameNameMap.isEmpty()) {
+        if (retrievedGames.isEmpty()) {
             return null;
         }
-        return gameIdToGameNameMap;
+        return retrievedGames;
     }
 
     public List<GameWrapper> parseResponseDomToGame(final HttpResponse response) {
@@ -116,7 +119,7 @@ public with sharing class BP_GameService implements BP_IGameService {
         String prepareSearchEndpoint(String gameName);
         String prepareSingleGameRecordEndpoint(Integer bggGameId);
         HttpResponse executeCallout(HttpRequest request);
-        Map<Integer, String> parseSearchResponse(HttpResponse response);
+        List<GameWrapper> parseSearchResponse(HttpResponse response);
         List<GameWrapper> parseResponseDomToGame(HttpResponse response);
     }
 }

@@ -1,22 +1,26 @@
 /**
- * Created by drzeju on 15/10/2023.
+ * Created by Jedrzej Gruca on 15/10/2023.
  */
 
 import {LightningElement, api, track} from 'lwc';
 import {ShowToastEvent} from "lightning/platformShowToastEvent";
-import getGamesBySearchString from '@salesforce/apex/BP_GameWrapperController.getGamesBySearchString'
+import {FlowNavigationBackEvent, FlowNavigationNextEvent, FlowAttributeChangeEvent} from 'lightning/flowSupport';
+import getGamesBySearchString from '@salesforce/apex/BP_GameWrapperController.getGamesBySearchString';
 
 export default class BpBggGameSearchResultList extends LightningElement {
     @track isLoading = false;
-    @track gameName = undefined;
+    @track gameName = '';
     @track data;
     @track isGameFound = true;
+    @api selectedOrderSapId;
+    @api selectedGameId;
+    @api AST_FlowContinued;
+    @api BP_FlowContinued;
+    @api AST_isFinishing;
+    @api BP_isFinishing;
 
     handleGameNameChange(event) {
         this.gameName = event.target.value;
-        if (this.gameName.toString().includes(' ')) {
-            this. gameName = this.gameName.toString().replace(' ', '_');
-        }
     }
 
     handleSearchGame(){
@@ -25,9 +29,8 @@ export default class BpBggGameSearchResultList extends LightningElement {
             .then(result => {
                 this.isLoading = false;
                 this.isGameFound = true;
-                console.log(result);
                 for (let row in result){
-                    console.log(row + ': ' + result[row]);
+                    console.log(result[row].bggId + ': ' + result[row].name);
                 }
                 this.data = result;
                 this.dispatchEvent(new ShowToastEvent({
@@ -48,4 +51,40 @@ export default class BpBggGameSearchResultList extends LightningElement {
             });
     }
 
+    get noGames() {
+        return !this.isLoading && this.data.length === 0;
+    }
+
+    get dataLoaded() {
+        return this.data;
+    }
+
+    get isNextButtonDisabled() {
+        return this.isLoading || !this.selectedGameId;
+    }
+
+    get searchResultListName() {
+        return 'Dla frazy: "' + this.gameName + '" znaleziono następujące gry:';
+    }
+
+    get isFlowContinued() {
+        return this.BP_FlowContinued;
+    }
+
+    handleGameChoice(event) {
+        this.selectedGameId = event.currentTarget.dataset['id'];
+        this.dispatchEvent(new FlowAttributeChangeEvent('selectedGameId', this.selectedGameId));
+        this.dispatchEvent(new FlowNavigationNextEvent());
+    }
+
+    handleGoBack() {
+        this.dispatchEvent(new FlowNavigationBackEvent());
+    }
+
+    handleQuit() {
+        this.BP_isFinishing = true;
+        const changeEvent = new FlowAttributeChangeEvent('BP_isFinishing', this.BP_isFinishing);
+        this.dispatchEvent(changeEvent);
+        this.dispatchEvent(new FlowNavigationNextEvent());
+    }
 }

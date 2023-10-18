@@ -1,20 +1,24 @@
 /**
- * Created by drzeju on 15/10/2023.
+ * Created by Jedrzej Gruca on 15/10/2023.
  */
 
 public with sharing class BP_GameWrapperController {
     @AuraEnabled
-    public static Map<Integer, String> getGamesBySearchString(String gameName) {
+    public static List<BP_GameService.GameWrapper> getGamesBySearchString(String gameName) {
         try {
             final BP_GameService service = BP_GameService.newInstance();
             if (gameName != null && gameName != '') {
-                final HttpRequest request = service.prepareRequestToBgg(true, gameName, null);
-                final HttpResponse response = service.executeCallout(request);
-                final Map<Integer, String> gameIdToNameMAp = new Map<Integer, String>();
-                if (response.getStatusCode() == 200) {
-                    gameIdToNameMAp.putAll(service.parseSearchResponse(response));
+                String modifiedGameName = gameName;
+                if (gameName.contains(' ')) {
+                    modifiedGameName = gameName.replace(' ', '_');
                 }
-                return gameIdToNameMAp;
+                final HttpRequest request = service.prepareRequestToBgg(true, modifiedGameName, null);
+                final HttpResponse response = service.executeCallout(request);
+                final List<BP_GameService.GameWrapper> games = new List<BP_GameService.GameWrapper>();
+                if (response.getStatusCode() == 200) {
+                    games.addAll(service.parseSearchResponse(response));
+                }
+                return games;
             }
             else {
                 return null;
