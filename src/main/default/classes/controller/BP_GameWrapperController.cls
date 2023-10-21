@@ -4,7 +4,7 @@
 
 public with sharing class BP_GameWrapperController {
     @AuraEnabled
-    public static List<BP_GameService.GameWrapper> getGamesBySearchString(String gameName) {
+    public static List<BP_GameWrapper> getGamesBySearchString(String gameName) {
         try {
             final BP_GameService service = BP_GameService.newInstance();
             if (gameName != null && gameName != '') {
@@ -14,7 +14,7 @@ public with sharing class BP_GameWrapperController {
                 }
                 final HttpRequest request = service.prepareRequestToBgg(true, modifiedGameName, null);
                 final HttpResponse response = service.executeCallout(request);
-                final List<BP_GameService.GameWrapper> games = new List<BP_GameService.GameWrapper>();
+                final List<BP_GameWrapper> games = new List<BP_GameWrapper>();
                 if (response.getStatusCode() == 200) {
                     games.addAll(service.parseSearchResponse(response));
                 }
@@ -29,13 +29,13 @@ public with sharing class BP_GameWrapperController {
     }
 
     @AuraEnabled
-    public static List<BP_GameService.GameWrapper> getGamesById(Integer gameId) {
+    public static List<BP_GameWrapper> getGamesById(Integer gameId) {
         try {
             final BP_GameService service = BP_GameService.newInstance();
             if (gameId != null) {
                 final HttpRequest request = service.prepareRequestToBgg(false, null, gameId);
                 final HttpResponse response = service.executeCallout(request);
-                final List<BP_GameService.GameWrapper> games = new List<BP_GameService.GameWrapper>();
+                final List<BP_GameWrapper> games = new List<BP_GameWrapper>();
                 if (response.getStatusCode() == 200) {
                     games.addAll(service.parseResponseDomToGame(response));
                 }

@@ -12,11 +12,8 @@ export default class BpBggGameSearchResultList extends LightningElement {
     @track gameName = '';
     @track data;
     @track isGameFound = true;
-    @api selectedOrderSapId;
     @api selectedGameId;
-    @api AST_FlowContinued;
     @api BP_FlowContinued;
-    @api AST_isFinishing;
     @api BP_isFinishing;
 
     handleGameNameChange(event) {
@@ -29,9 +26,6 @@ export default class BpBggGameSearchResultList extends LightningElement {
             .then(result => {
                 this.isLoading = false;
                 this.isGameFound = true;
-                for (let row in result){
-                    console.log(result[row].bggId + ': ' + result[row].name);
-                }
                 this.data = result;
                 this.dispatchEvent(new ShowToastEvent({
                     title: 'Znaleziono gry!',
@@ -72,7 +66,8 @@ export default class BpBggGameSearchResultList extends LightningElement {
     }
 
     handleGameChoice(event) {
-        this.selectedGameId = event.currentTarget.dataset['id'];
+        let gameId = event.currentTarget.getAttribute('id');
+        this.selectedGameId = gameId.split('-')[0];
         this.dispatchEvent(new FlowAttributeChangeEvent('selectedGameId', this.selectedGameId));
         this.dispatchEvent(new FlowNavigationNextEvent());
     }

@@ -1,3 +1,9 @@
 /**
  * Created by Jedrzej Gruca on 15/10/2023.
  */
+
+.box-focusable:hover {
+    border-color: #196824;
+    background: #efefef;
+    cursor: pointer;
+}

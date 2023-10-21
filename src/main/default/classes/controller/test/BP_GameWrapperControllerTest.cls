@@ -21,7 +21,7 @@ private class BP_GameWrapperControllerTest {
         fakeResponse.setStatus('OK');
         fakeResponse.setStatusCode(200);
 
-        BP_GameService.GameWrapper fakeWrapper = new BP_GameService.GameWrapper();
+        BP_GameWrapper fakeWrapper = new BP_GameWrapper();
         fakeWrapper.bggId = 342942;
         fakeWrapper.name = 'Ark Nova';
 
@@ -31,7 +31,7 @@ private class BP_GameWrapperControllerTest {
         mocks.when(gameServiceMock.prepareRequestToBgg(true, 'Ark_Nova', null))
                 .thenReturn(fakeRequest);
         mocks.when(gameServiceMock.executeCallout(fakeRequest)).thenReturn(fakeResponse);
-        mocks.when(gameServiceMock.parseSearchResponse(fakeResponse)).thenReturn(new List<BP_GameService.GameWrapper>{fakeWrapper});
+        mocks.when(gameServiceMock.parseSearchResponse(fakeResponse)).thenReturn(new List<BP_GameWrapper>{fakeWrapper});
         mocks.stopStubbing();
         BP_Application.service.setMock(BP_GameService.BP_IGameService.class, gameServiceMock);
 
@@ -59,7 +59,7 @@ private class BP_GameWrapperControllerTest {
         fakeResponse.setStatus('OK');
         fakeResponse.setStatusCode(200);
 
-        BP_GameService.GameWrapper fakeWrapper = new BP_GameService.GameWrapper();
+        BP_GameWrapper fakeWrapper = new BP_GameWrapper();
         fakeWrapper.bggId = 342942;
         fakeWrapper.name = 'Ark Nova';
 
@@ -69,7 +69,7 @@ private class BP_GameWrapperControllerTest {
         mocks.when(gameServiceMock.prepareRequestToBgg(false, null, fakeWrapper.bggId))
                 .thenReturn(fakeRequest);
         mocks.when(gameServiceMock.executeCallout(fakeRequest)).thenReturn(fakeResponse);
-        mocks.when(gameServiceMock.parseResponseDomToGame(fakeResponse)).thenReturn(new List<BP_GameService.GameWrapper>{fakeWrapper});
+        mocks.when(gameServiceMock.parseResponseDomToGame(fakeResponse)).thenReturn(new List<BP_GameWrapper>{fakeWrapper});
         mocks.stopStubbing();
         BP_Application.service.setMock(BP_GameService.BP_IGameService.class, gameServiceMock);
 

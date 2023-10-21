@@ -3,7 +3,8 @@
     <fullName>BP_Description__c</fullName>
     <externalId>false</externalId>
     <label>Description</label>
-    <required>false</required>
+    <length>5000</length>
     <trackTrending>false</trackTrending>
-    <type>TextArea</type>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
 </CustomField>

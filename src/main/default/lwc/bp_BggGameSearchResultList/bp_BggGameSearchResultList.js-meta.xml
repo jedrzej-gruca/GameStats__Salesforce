@@ -7,5 +7,13 @@
     <targets>
         <target>lightning__HomePage</target>
         <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
     </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="selectedGameId" label="Selected Game ID" type="Integer" role="outputOnly"/>
+            <property name="BP_FlowContinued" label="Is this flow continuing?" type="Boolean" role="inputOnly"/>
+            <property name="BP_isFinishing" label="Is this flow quiting?" type="Boolean" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>

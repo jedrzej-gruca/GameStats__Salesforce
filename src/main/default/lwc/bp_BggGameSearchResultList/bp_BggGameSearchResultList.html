@@ -35,7 +35,7 @@
                 <lightning-layout if:false={noGames} multiple-rows="true">
                     <template for:each={data} for:item="game">
                         <lightning-layout-item key={game.bbgId} flexibility="grow" size="12">
-                            <div class="slds-box box-focusable slds-m-around_xx-small" onclick={handleGameChoice} data-id={game.bbgId}>
+                            <div class="slds-box box-focusable slds-m-around_xx-small" onclick={handleGameChoice} id={game.bggId}>
                                 <p class="slds-text-title">Id: <strong>{game.bggId}</strong></p>
                                 <p class="slds-text-title">Nazwa: <strong>{game.name}</strong></p>
                             </div>

@@ -33,82 +33,48 @@
         <name>StaticResource</name>
     </types>
     <types>
-        <members>BP_Author__c</members>
-        <members>BP_CollectionItem__c</members>
-        <members>BP_GameAuthor__c</members>
-        <members>BP_Game__c</members>
-        <members>BP_GameplayPlayer__c</members>
-        <members>BP_Gameplay__c</members>
-        <members>BP_Player__c</members>
-        <members>BP_Score__c</members>
+        <members>*</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>BP_Author__c-en_US</members>
-        <members>BP_CollectionItem__c-en_US</members>
-        <members>BP_GameAuthor__c-en_US</members>
-        <members>BP_Game__c-en_US</members>
-        <members>BP_GameplayPlayer__c-en_US</members>
-        <members>BP_Gameplay__c-en_US</members>
-        <members>BP_Player__c-en_US</members>
-        <members>BP_Score__c-en_US</members>
+        <members>*</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
-        <members>BP_Author__c</members>
-        <members>BP_CollectionItem__c</members>
-        <members>BP_GameAuthor__c</members>
-        <members>BP_Game__c</members>
-        <members>BP_GameplayPlayer__c</members>
-        <members>BP_Gameplay__c</members>
-        <members>BP_Player__c</members>
-        <members>BP_Score__c</members>
+        <members>*</members>
         <name>TopicsForObjects</name>
     </types>
     <types>
-        <members>BP_Author__c-Author Layout</members>
-        <members>BP_CollectionItem__c-Collection Item Layout</members>
-        <members>BP_GameAuthor__c-Game Author Layout</members>
-        <members>BP_Game__c-Game Layout</members>
-        <members>BP_GameplayPlayer__c-Gameplay Player Layout</members>
-        <members>BP_Gameplay__c-Game Play Layout</members>
-        <members>BP_Player__c-Player Layout</members>
-        <members>BP_Score__c-Score Layout</members>
+        <members>*</members>
         <name>Layout</name>
     </types>
     <types>
-        <members>fflib_QueryFactory_crossobject_fieldsets_not_allowed_error</members>
-        <members>fflib_QueryFactory_fieldset_wrong_sobject_error</members>
-        <members>fflib_QueryFactory_recursive_subquery_error</members>
-        <members>fflib_QueryFactory_subquery_invalid_relationship</members>
-        <members>fflib_security_error_field_not_insertable</members>
-        <members>fflib_security_error_field_not_readable</members>
-        <members>fflib_security_error_field_not_updateable</members>
-        <members>fflib_security_error_object_not_deletable</members>
-        <members>fflib_security_error_object_not_insertable</members>
-        <members>fflib_security_error_object_not_readable</members>
-        <members>fflib_security_error_object_not_updateable</members>
+        <members>*</members>
         <name>CustomLabel</name>
     </types>
     <types>
-        <members>BP_GameStatsHome</members>
-        <members>Games</members>
+        <members>*</members>
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>BP_GameStatsApp</members>
+        <members>*</members>
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>Games</members>
+        <members>*</members>
         <name>CustomTab</name>
     </types>
     <types>
-        <members>BP_AdministratorPermissions</members>
+        <members>*</members>
         <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
     </types>
     <version>58.0</version>
 </Package>

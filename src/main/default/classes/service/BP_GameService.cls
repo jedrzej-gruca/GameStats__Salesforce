@@ -4,24 +4,6 @@
 
 public with sharing class BP_GameService implements BP_IGameService {
 
-    public class GameWrapper {
-        @AuraEnabled
-        public String name { get; set;}
-        @AuraEnabled
-        public Integer bggId { get; set;}
-        Integer yearPublished;
-        Integer minPlayers;
-        Integer maxPlayers;
-        Integer minPlaytime;
-        Integer maxPlaytime;
-        Integer age;
-        String description;
-        String boardgameDesigner;
-        List<String> boardgameMechanic;
-        List<String> boardgameCategory;
-        List<String> boardgameSubdomain;
-    }
-
     public static BP_GameService newInstance() {
         return (BP_GameService) BP_Application.service.newInstance(BP_IGameService.class);
     }
@@ -56,12 +38,12 @@ public with sharing class BP_GameService implements BP_IGameService {
         return response;
     }
 
-    public List<GameWrapper> parseSearchResponse(final HttpResponse response) {
+    public List<BP_GameWrapper> parseSearchResponse(final HttpResponse response) {
         final Dom.Document gameList = response.getBodyDocument();
-        final List<GameWrapper> retrievedGames = new List<GameWrapper>();
+        final List<BP_GameWrapper> retrievedGames = new List<BP_GameWrapper>();
         Dom.XmlNode games = gameList.getRootElement();
         for (Dom.XmlNode game : games.getChildElements()) {
-            GameWrapper gw = new GameWrapper();
+            BP_GameWrapper gw = new BP_GameWrapper();
             gw.bggId = Integer.valueOf(game.getAttribute(BP_Constants.BOARDGAME_NODE_ATTRIBUTE_NAME, null));
             gw.name = game.getChildElement(BP_Constants.NAME_SUBNODE_NAME, null).getText();
             retrievedGames.add(gw);
@@ -72,14 +54,14 @@ public with sharing class BP_GameService implements BP_IGameService {
         return retrievedGames;
     }
 
-    public List<GameWrapper> parseResponseDomToGame(final HttpResponse response) {
+    public List<BP_GameWrapper> parseResponseDomToGame(final HttpResponse response) {
         final Dom.Document gameList = response.getBodyDocument();
 
         //Retrieve the root element for this document.
         final Dom.XmlNode games = gameList.getRootElement();
-        final List<GameWrapper> boardGames = new List<GameWrapper>();
+        final List<BP_GameWrapper> boardGames = new List<BP_GameWrapper>();
         for(Dom.XmlNode game : games.getChildElements()) {
-            final GameWrapper gameWrapper = new GameWrapper();
+            final BP_GameWrapper gameWrapper = new BP_GameWrapper();
             final List<String> subdomains = new List<String>();
             final List<String> categories = new List<String>();
             final List<String> mechanics = new List<String>();
@@ -119,7 +101,7 @@ public with sharing class BP_GameService implements BP_IGameService {
         String prepareSearchEndpoint(String gameName);
         String prepareSingleGameRecordEndpoint(Integer bggGameId);
         HttpResponse executeCallout(HttpRequest request);
-        List<GameWrapper> parseSearchResponse(HttpResponse response);
-        List<GameWrapper> parseResponseDomToGame(HttpResponse response);
+        List<BP_GameWrapper> parseSearchResponse(HttpResponse response);
+        List<BP_GameWrapper> parseResponseDomToGame(HttpResponse response);
     }
 }
