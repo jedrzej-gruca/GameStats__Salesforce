@@ -3,7 +3,7 @@
     <fullName>BP_MaximumPlaytimeInMinutes__c</fullName>
     <externalId>false</externalId>
     <label>Maximum Playtime In Minutes</label>
-    <precision>3</precision>
+    <precision>4</precision>
     <required>false</required>
     <scale>0</scale>
     <trackTrending>false</trackTrending>

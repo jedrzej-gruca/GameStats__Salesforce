@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>BP_MinimumPlayersNumber__c</columns>
+    <columns>BP_MaximumPlayersNumber__c</columns>
+    <columns>BP_RecommendedAge__c</columns>
+    <columns>BP_IsExpansion__c</columns>
+    <columns>BP_ExpansionFor__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

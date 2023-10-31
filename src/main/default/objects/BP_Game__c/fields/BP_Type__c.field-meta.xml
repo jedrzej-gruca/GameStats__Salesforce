@@ -11,11 +11,6 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Abstracts</fullName>
-                <default>false</default>
-                <label>Abstracts</label>
-            </value>
-            <value>
                 <fullName>Customisable Games</fullName>
                 <default>false</default>
                 <label>Customisable Games</label>
@@ -49,6 +44,11 @@
                 <fullName>Wargames</fullName>
                 <default>false</default>
                 <label>Wargames</label>
+            </value>
+            <value>
+                <fullName>Abstract Games</fullName>
+                <default>false</default>
+                <label>Abstract Games</label>
             </value>
         </valueSetDefinition>
     </valueSet>

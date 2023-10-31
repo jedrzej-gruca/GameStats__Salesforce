@@ -84,5 +84,10 @@
         <members>*</members>
         <name>Role</name>
     </types>
+    <types>
+        <members>BP_GameOwnerReports</members>
+        <members>BP_GameOwnerReports/BP_NumberOfGamesPerTypeReport</members>
+        <name>Report</name>
+    </types>
     <version>58.0</version>
 </Package>

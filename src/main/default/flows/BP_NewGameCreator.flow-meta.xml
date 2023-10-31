@@ -227,6 +227,13 @@
                 <elementReference>BP_RetrievedGameDescription</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>BP_NewGame.BP_RecommendedAge__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>BP_RetrievedGameAge</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>BP_CreateGameRecord</targetReference>
         </connector>
@@ -331,6 +338,13 @@
         <object>BP_Game__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>BP_UpdateNewGame</name>
+        <label>Update New Game</label>
+        <locationX>176</locationX>
+        <locationY>1682</locationY>
+        <inputReference>BP_GetNewGame</inputReference>
+    </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <name>BP_AdditionalDetailsScreen</name>
@@ -340,6 +354,9 @@
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>BP_UpdateNewGame</targetReference>
+        </connector>
         <fields>
             <name>BP_NewGameModificationDescription</name>
             <fieldText>&lt;p&gt;Utworzono grę o następujących parametrach:&lt;/p&gt;</fieldText>
@@ -511,6 +528,7 @@
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
+        <nextOrFinishButtonLabel>Save</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
