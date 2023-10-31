@@ -76,5 +76,13 @@
         <members>*</members>
         <name>Flow</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Role</name>
+    </types>
     <version>58.0</version>
 </Package>
