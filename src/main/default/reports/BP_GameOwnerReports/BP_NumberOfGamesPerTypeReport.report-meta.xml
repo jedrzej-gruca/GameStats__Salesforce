@@ -44,13 +44,22 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>BP_Game__c.BP_IsExpansion__c</field>
     </columns>
+    <filter>
+        <criteriaItems>
+            <column>BP_Game__c.BP_IsExpansion__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>BP_Game__c.BP_Type__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Number of games per type</name>
+    <name>Number of games per type excl Expansions</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -58,8 +67,8 @@
     <reportType>CustomEntity$BP_Game__c</reportType>
     <scope>user</scope>
     <showDetails>true</showDetails>
-    <showGrandTotal>true</showGrandTotal>
-    <showSubTotals>true</showSubTotals>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
     <timeFrameFilter>
         <dateColumn>CUST_CREATED_DATE</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

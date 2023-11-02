@@ -34,6 +34,7 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
                 game.BP_Description__c = game.BP_Description__c.replace('&ndash;', '-');
                 game.BP_Description__c = game.BP_Description__c.replace('&times;', '*');
                 game.BP_Description__c = game.BP_Description__c.replace('&amp;', '&');
+                game.BP_Description__c = game.BP_Description__c.replace('&nbsp;', ' ');
                 game.BP_Description__c = game.BP_Description__c.replace('  ', ' ');
             }
         }

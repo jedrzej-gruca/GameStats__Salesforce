@@ -591,7 +591,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Number of Games per Type</value>
+                    <value>Number of Games per Type excl Expansions</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>reportName</name>
