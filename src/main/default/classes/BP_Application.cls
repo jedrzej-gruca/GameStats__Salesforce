@@ -17,6 +17,21 @@ public with sharing class BP_Application {
                     }
             );
 
+    public static final fflib_Application.SelectorFactory selector =
+            new fflib_Application.SelectorFactory(
+                    new Map<SObjectType, Type>{
+
+                    }
+            );
+
+    public static final fflib_Application.DomainFactory domain =
+            new fflib_Application.DomainFactory(
+                    BP_Application.selector,
+                    new Map<SObjectType, Type>{
+                        BP_Game__c.SObjectType => BP_Games.Constructor.class
+                    }
+            );
+
     public without sharing class WithoutSharingUowManager {
         private final fflib_ISObjectUnitOfWork uow;
         public WithoutSharingUowManager(fflib_ISObjectUnitOfWork uow) {
