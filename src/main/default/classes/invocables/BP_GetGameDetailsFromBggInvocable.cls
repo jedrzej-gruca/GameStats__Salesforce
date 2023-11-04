@@ -14,7 +14,6 @@ public with sharing class BP_GetGameDetailsFromBggInvocable {
             Description='Returns details of chosen game'
             Callout=true
     )
-//    public static BP_GameWrapper getGameById(List<FlowInput> inputs) {
     public static List<BP_GameWrapper> getGameById(List<FlowInput> inputs) {
         final FlowInput input = inputs[0];
         final Integer bggId = input.BggId;
@@ -22,13 +21,10 @@ public with sharing class BP_GetGameDetailsFromBggInvocable {
         if (bggId != null) {
             final HttpRequest request = service.prepareRequestToBgg(false, null, bggId);
             final HttpResponse response = service.executeCallout(request);
-//            BP_GameWrapper game;
             final List<BP_GameWrapper> games = new List<BP_GameWrapper>();
             if (response.getStatusCode() == 200) {
-//                game = service.parseResponseDomToGame(response).get(0);
                 games.addAll(service.parseResponseDomToGame(response));
             }
-//            return game;
             return games;
         } else {
             return null;

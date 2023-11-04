@@ -20,6 +20,14 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
 
     public override void onBeforeUpdate(Map<Id, SObject> existingRecords) {}
 
+    public override void onAfterInsert() {
+
+    }
+
+    public override void onAfterUpdate(Map<Id,SObject> existingRecords) {
+        setHasExpansionOnParentGame();
+    }
+
     private void setProperDescription() {
         for (BP_Game__c game : (List<BP_Game__c>)Records) {
             if (game.BP_Description__c != null) {
@@ -38,5 +46,31 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
                 game.BP_Description__c = game.BP_Description__c.replace('  ', ' ');
             }
         }
+    }
+
+    private void setHasExpansionOnParentGame() {
+        final List<BP_Game__c> expansions = getChangedRecords(new Set<SObjectField>{BP_Game__c.BP_IsExpansion__c});
+        final Set<Id> parentGamesIds = new Set<Id>();
+        for (BP_Game__c exp : expansions) {
+            if (exp.BP_IsExpansion__c && exp.BP_ExpansionFor__c != null) {
+                parentGamesIds.add(exp.BP_ExpansionFor__c);
+            }
+        }
+        if (parentGamesIds.isEmpty()) {
+            return;
+        }
+        final List<BP_Game__c> parentGames = new List<BP_Game__c>(BP_GameSelector.newInstance().selectByIdAndHasExpansion(parentGamesIds, false));
+        if (parentGames.isEmpty()) {
+            return;
+        }
+        final fflib_ISObjectUnitOfWork uow = BP_Application.unitOfWork.newInstance(new List<SObjectType>{BP_Game__c.SObjectType});
+        for (BP_Game__c game : parentGames) {
+            if (!game.BP_IsExpansion__c) {
+                game.BP_HasExpansion__c = true;
+                uow.registerDirty(game);
+            }
+
+        }
+        uow.commitWork();
     }
 }

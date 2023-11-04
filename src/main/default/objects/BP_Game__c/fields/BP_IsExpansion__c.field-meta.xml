@@ -5,6 +5,7 @@
     <description>True if game is expansion to another game</description>
     <externalId>false</externalId>
     <label>Is Expansion</label>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

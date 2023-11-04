@@ -36,6 +36,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>BP_Game__c.BP_HasExpansion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>BP_Game__c.BP_IsExpansion__c</field>
         <readable>true</readable>
     </fieldPermissions>

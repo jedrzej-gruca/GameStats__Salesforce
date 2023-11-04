@@ -13,6 +13,40 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>filterName</name>
+                    <value>All</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideActionBar</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideSearchBar</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>pageSize</name>
+                    <value>10</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:filterListCard</componentName>
+                <identifier>flexipage_filterListCard</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-c34bbf75-6928-4452-99a6-2986bb8431c5</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>enableInlineEdit</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>entityName</name>
+                    <value>BP_Game__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterName</name>
                     <value>BP_AbstractGamesListView</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -28,10 +62,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard3</identifier>
+                <identifier>flexipage_filterListCard12</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-6955e1e7-f529-4451-a717-cba078ca6498</name>
+        <name>Facet-v236inr39c</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -62,10 +96,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard4</identifier>
+                <identifier>flexipage_filterListCard13</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-7f6119d6-6f0d-4dca-90d1-60bc71b4bd8a</name>
+        <name>Facet-ote3xrpvbt</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -96,10 +130,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard5</identifier>
+                <identifier>flexipage_filterListCard14</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-588x2d3sjv8</name>
+        <name>Facet-ekbsz8za3d6</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -130,10 +164,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard6</identifier>
+                <identifier>flexipage_filterListCard15</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-674dd644-bc45-4c10-95a8-5c7436c23f57</name>
+        <name>Facet-9nvmf4zjny5</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -164,10 +198,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard7</identifier>
+                <identifier>flexipage_filterListCard16</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-3995e4e2-ac94-4885-943c-effba3e5ac97</name>
+        <name>Facet-kys04vuy0vd</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -183,7 +217,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>filterName</name>
-                    <value>BP_PartyGamesListView</value>
+                    <value>BP_StrategyGamesListView</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideActionBar</name>
@@ -198,10 +232,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard8</identifier>
+                <identifier>flexipage_filterListCard17</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-333b622e-0e25-4f46-a794-fb8fe4b965b2</name>
+        <name>Facet-592vrjxact8</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -232,10 +266,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard9</identifier>
+                <identifier>flexipage_filterListCard18</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-fe1d9ece-ab15-4a51-b020-a812a1fb4156</name>
+        <name>Facet-hzvskk4w0s7</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -266,10 +300,10 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard10</identifier>
+                <identifier>flexipage_filterListCard19</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-7cb332b9-7da8-420b-a30d-1162ac9206cc</name>
+        <name>Facet-wwoicm50ztq</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -281,148 +315,118 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-6955e1e7-f529-4451-a717-cba078ca6498</value>
+                    <value>Facet-v236inr39c</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Abstract</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab3</identifier>
+                <identifier>flexipage_tab13</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-7f6119d6-6f0d-4dca-90d1-60bc71b4bd8a</value>
+                    <value>Facet-ote3xrpvbt</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Children</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab4</identifier>
+                <identifier>flexipage_tab14</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-588x2d3sjv8</value>
+                    <value>Facet-ekbsz8za3d6</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Customizable</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab5</identifier>
+                <identifier>flexipage_tab15</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-674dd644-bc45-4c10-95a8-5c7436c23f57</value>
+                    <value>Facet-9nvmf4zjny5</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Family</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab6</identifier>
+                <identifier>flexipage_tab16</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-3995e4e2-ac94-4885-943c-effba3e5ac97</value>
+                    <value>Facet-kys04vuy0vd</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Party</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab7</identifier>
+                <identifier>flexipage_tab17</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-333b622e-0e25-4f46-a794-fb8fe4b965b2</value>
+                    <value>Facet-592vrjxact8</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Strategy</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab8</identifier>
+                <identifier>flexipage_tab18</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-fe1d9ece-ab15-4a51-b020-a812a1fb4156</value>
+                    <value>Facet-hzvskk4w0s7</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Thematic</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab9</identifier>
+                <identifier>flexipage_tab19</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-7cb332b9-7da8-420b-a30d-1162ac9206cc</value>
+                    <value>Facet-wwoicm50ztq</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Wargames</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab10</identifier>
+                <identifier>flexipage_tab20</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-1ae00741-f544-432e-a838-9ae68b124e03</name>
+        <name>Facet-ha3m8zwl24s</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>enableInlineEdit</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>entityName</name>
-                    <value>BP_Game__c</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>filterName</name>
-                    <value>All</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>hideActionBar</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>hideSearchBar</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>pageSize</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:filterListCard</componentName>
-                <identifier>flexipage_filterListCard</identifier>
-            </componentInstance>
-        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
@@ -434,20 +438,20 @@
                     <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Games per Type&lt;/strong&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
-                <identifier>flexipage_richText</identifier>
+                <identifier>flexipage_richText2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
-                    <value>Facet-1ae00741-f544-432e-a838-9ae68b124e03</value>
+                    <value>Facet-ha3m8zwl24s</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset2</identifier>
+                <identifier>flexipage_tabset3</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-c34bbf75-6928-4452-99a6-2986bb8431c5</name>
+        <name>Facet-9ce52bb8-d87a-4164-9331-f7726b2144b3</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -535,6 +539,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-9ce52bb8-d87a-4164-9331-f7726b2144b3</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Games by Type</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab12</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

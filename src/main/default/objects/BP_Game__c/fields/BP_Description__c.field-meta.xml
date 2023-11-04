@@ -4,6 +4,7 @@
     <externalId>false</externalId>
     <label>Description</label>
     <length>5000</length>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>LongTextArea</type>
     <visibleLines>4</visibleLines>
