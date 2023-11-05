@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>BP_Publisher</fullName>
     <active>true</active>
+    <compactLayoutAssignment>BP_PublisherCompactLayout</compactLayoutAssignment>
     <label>Publisher</label>
     <picklistValues>
         <picklist>AccountSource</picklist>

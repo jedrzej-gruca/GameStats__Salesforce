@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_PublisherCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>Website</fields>
+    <fields>BP_NumberOfGames__c</fields>
+    <fields>BP_NumberOfExpansions__c</fields>
+    <label>Publisher Compact Layout</label>
+</CompactLayout>
