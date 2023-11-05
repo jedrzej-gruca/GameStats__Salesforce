@@ -89,5 +89,13 @@
         <members>BP_GameOwnerReports/BP_NumberOfGamesPerTypeReport</members>
         <name>Report</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>QuickAction</name>
+    </types>
     <version>58.0</version>
 </Package>

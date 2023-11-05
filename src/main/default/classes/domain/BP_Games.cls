@@ -4,6 +4,8 @@
 
 public with sharing class BP_Games extends fflib_SObjectDomain {
 
+    //TODO: DUPLICATE CHECK FOR GAME RECORDS
+
     public BP_Games(List<BP_Game__c> sObjectList) {
         super(sObjectList);
     }

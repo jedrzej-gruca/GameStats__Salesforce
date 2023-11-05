@@ -23,6 +23,7 @@
     <navType>Console</navType>
     <tabs>standard-home</tabs>
     <tabs>Games</tabs>
+    <tabs>standard-Account</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
@@ -30,6 +31,9 @@
     <workspaceConfig>
         <mappings>
             <tab>Games</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Account</tab>
         </mappings>
         <mappings>
             <tab>standard-Dashboard</tab>
