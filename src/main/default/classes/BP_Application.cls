@@ -20,7 +20,8 @@ public with sharing class BP_Application {
     public static final fflib_Application.SelectorFactory selector =
             new fflib_Application.SelectorFactory(
                     new Map<SObjectType, Type>{
-                        BP_Game__c.SObjectType => BP_GameSelector.class
+                        BP_Game__c.SObjectType => BP_GameSelector.class,
+                        Account.SObjectType => BP_AccountSelector.class
                     }
             );
 

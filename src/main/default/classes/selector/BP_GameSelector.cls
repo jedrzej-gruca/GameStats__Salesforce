@@ -23,7 +23,8 @@ public with sharing class BP_GameSelector extends fflib_SObjectSelector implemen
                 BP_Game__c.BP_Type__c,
                 BP_Game__c.BP_Category__c,
                 BP_Game__c.BP_Mechanic__c,
-                BP_Game__c.BP_RecommendedAge__c
+                BP_Game__c.BP_RecommendedAge__c,
+                BP_Game__c.BP_Publisher__c
         };
     }
 
@@ -36,6 +37,13 @@ public with sharing class BP_GameSelector extends fflib_SObjectSelector implemen
                 .selectField(BP_Game__c.BP_HasExpansion__c)
                 .selectField(BP_Game__c.BP_IsExpansion__c)
                 .setCondition('Id IN :ids AND BP_HasExpansion__c = :hasExpansion');
+        return Database.query(String.escapeSingleQuotes(queryFactory.toSOQL()));
+    }
+
+    public List<BP_Game__c> selectByPublisherId(Set<Id> ids) {
+        final fflib_QueryFactory queryFactory = newQueryFactory()
+                .selectField(BP_Game__c.BP_IsExpansion__c)
+                .setCondition('BP_Publisher__c IN :ids');
         return Database.query(String.escapeSingleQuotes(queryFactory.toSOQL()));
     }
 
