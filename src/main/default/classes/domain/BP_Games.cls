@@ -142,7 +142,7 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
             if (gm.BP_Publisher__c != null) {
                 publisherIds.add(gm.BP_Publisher__c);
             }
-            if (!existingRecords.isEmpty() && existingRecords.get(gm.Id).BP_Publisher__c != gm.BP_Publisher__c) {
+            if (existingRecords != null && !existingRecords.isEmpty() && existingRecords.get(gm.Id).BP_Publisher__c != gm.BP_Publisher__c) {
                 publisherIds.add(existingRecords.get(gm.Id).BP_Publisher__c);
             }
         }

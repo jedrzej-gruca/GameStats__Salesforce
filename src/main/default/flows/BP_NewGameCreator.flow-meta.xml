@@ -3,7 +3,7 @@
     <actionCalls>
         <name>BP_GetGameDetailsFromBggAction</name>
         <label>Get Game Details From BGG Action</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>242</locationY>
         <actionName>BP_GetGameDetailsFromBggInvocable</actionName>
         <actionType>apex</actionType>
@@ -79,7 +79,7 @@
     <assignments>
         <name>BP_AddSelectedCategory</name>
         <label>Add Selected Category</label>
-        <locationX>264</locationX>
+        <locationX>270</locationX>
         <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>BP_RefactoredGameCategories</assignToReference>
@@ -102,7 +102,7 @@
     <assignments>
         <name>BP_AddSelectedMechanic</name>
         <label>Add Selected Mechanic</label>
-        <locationX>264</locationX>
+        <locationX>270</locationX>
         <locationY>758</locationY>
         <assignmentItems>
             <assignToReference>BP_RefactoredGameMechanics</assignToReference>
@@ -125,7 +125,7 @@
     <assignments>
         <name>BP_AddSelectedSubdomain</name>
         <label>Add Selected Subdomain</label>
-        <locationX>264</locationX>
+        <locationX>270</locationX>
         <locationY>1058</locationY>
         <assignmentItems>
             <assignToReference>BP_RefactoredGameSubdomains</assignToReference>
@@ -148,7 +148,7 @@
     <assignments>
         <name>BP_AssignNewGameParams</name>
         <label>Assign New Game Params</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>1250</locationY>
         <assignmentItems>
             <assignToReference>BP_NewGame.Name</assignToReference>
@@ -234,10 +234,58 @@
                 <elementReference>BP_RetrievedGameAge</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>BP_NewGame.BP_bggId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedGameId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>BP_CreatedFromPublisherPage</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>BP_AssignPublisher</name>
+        <label>Assign Publisher</label>
+        <locationX>50</locationX>
+        <locationY>1466</locationY>
+        <assignmentItems>
+            <assignToReference>BP_NewGame.BP_Publisher__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>BP_CreateGameRecord</targetReference>
         </connector>
     </assignments>
+    <decisions>
+        <name>BP_CreatedFromPublisherPage</name>
+        <label>Created From Publisher Page?</label>
+        <locationX>182</locationX>
+        <locationY>1358</locationY>
+        <defaultConnector>
+            <targetReference>BP_CreateGameRecord</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>BP_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>BP_AssignPublisher</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>BP_BggGamePageFormula</name>
@@ -249,7 +297,7 @@
     <loops>
         <name>BP_CategoryLoop</name>
         <label>Category Loop</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>350</locationY>
         <collectionReference>BP_RetrievedGameCategories</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -263,7 +311,7 @@
     <loops>
         <name>BP_MechanicLoop</name>
         <label>Mechanic Loop</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>650</locationY>
         <collectionReference>BP_RetrievedGameMechanics</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -277,7 +325,7 @@
     <loops>
         <name>BP_SubdomainLoop</name>
         <label>Subdomain Loop</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>950</locationY>
         <collectionReference>BP_RetrievedGameSubdomains</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -310,18 +358,21 @@
     <recordCreates>
         <name>BP_CreateGameRecord</name>
         <label>Create Game Record</label>
-        <locationX>176</locationX>
-        <locationY>1358</locationY>
+        <locationX>182</locationX>
+        <locationY>1658</locationY>
         <connector>
             <targetReference>BP_GetNewGame</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>BP_ErrorMessageOnCreateGame</targetReference>
+        </faultConnector>
         <inputReference>BP_NewGame</inputReference>
     </recordCreates>
     <recordLookups>
         <name>BP_GetNewGame</name>
         <label>Get New Game</label>
-        <locationX>176</locationX>
-        <locationY>1466</locationY>
+        <locationX>182</locationX>
+        <locationY>1766</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>BP_AdditionalDetailsScreen</targetReference>
@@ -341,16 +392,16 @@
     <recordUpdates>
         <name>BP_UpdateNewGame</name>
         <label>Update New Game</label>
-        <locationX>176</locationX>
-        <locationY>1682</locationY>
+        <locationX>182</locationX>
+        <locationY>1982</locationY>
         <inputReference>BP_GetNewGame</inputReference>
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <name>BP_AdditionalDetailsScreen</name>
         <label>Additional Details Screen</label>
-        <locationX>176</locationX>
-        <locationY>1574</locationY>
+        <locationX>182</locationX>
+        <locationY>1874</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -535,7 +586,7 @@
     <screens>
         <name>BP_CreatorHeader</name>
         <label>Kreator Nowej Gry</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>134</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -573,9 +624,25 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>BP_ErrorMessageOnCreateGame</name>
+        <label>Error Message On Create Game</label>
+        <locationX>490</locationX>
+        <locationY>1766</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>BP_DisplayErrorMessage</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(182, 0, 0);&quot;&gt;Gra, którą próbujesz dodać jest już w bazie danych.&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>BP_ErrorScreen</name>
         <label>Error Screen</label>
-        <locationX>440</locationX>
+        <locationX>754</locationX>
         <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -589,7 +656,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>BP_CreatorHeader</targetReference>
@@ -744,6 +811,14 @@
         <isInput>false</isInput>
         <isOutput>true</isOutput>
         <scale>0</scale>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
     </variables>
     <variables>
         <name>selectedGameId</name>

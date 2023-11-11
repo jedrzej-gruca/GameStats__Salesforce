@@ -97,5 +97,13 @@
         <members>*</members>
         <name>QuickAction</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>MatchingRule</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>DuplicateRule</name>
+    </types>
     <version>58.0</version>
 </Package>

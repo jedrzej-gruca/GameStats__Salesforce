@@ -271,6 +271,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>BP_Game__c.BP_bggId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>BP_Gameplay__c.BP_Organizer__c</field>
         <readable>true</readable>
     </fieldPermissions>
