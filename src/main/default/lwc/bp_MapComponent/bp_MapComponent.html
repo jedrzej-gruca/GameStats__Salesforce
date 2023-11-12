@@ -1,0 +1,14 @@
+<!--
+ - Created by Jedrzej Gruca on 12/11/2023.
+ -->
+
+<!-- Map Component -->
+<template>
+    <lightning-map
+            map-markers={mapMarkers}
+            onmarkerselect={handleMarkerSelect}
+            options={mapOptions}
+            selected-marker-value={selectedMarkerValue}
+            zoom-level={zoomLevel}
+    ></lightning-map>
+</template>

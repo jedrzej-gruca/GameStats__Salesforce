@@ -29,7 +29,8 @@ public with sharing class BP_Application {
             new fflib_Application.DomainFactory(
                     BP_Application.selector,
                     new Map<SObjectType, Type>{
-                        BP_Game__c.SObjectType => BP_Games.Constructor.class
+                        BP_Game__c.SObjectType => BP_Games.Constructor.class,
+                        Account.SObjectType => BP_Accounts.Constructor.class
                     }
             );
 

@@ -29,6 +29,14 @@ public with sharing class BP_AccountSelector extends fflib_SObjectSelector imple
         return (List<Account>)selectSObjectsById(ids);
     }
 
+    public List<Account> selectByIdWithAdditionalFields(Set<Id> ids) {
+        final fflib_QueryFactory queryFactory = newQueryFactory()
+                .selectField(Account.Location__Latitude__s)
+                .selectField(Account.Location__Longitude__s)
+                .setCondition('Id IN :ids');
+        return Database.query(String.escapeSingleQuotes(queryFactory.toSOQL()));
+    }
+
     public interface BP_IAccountSelector {
         SObjectType getSObjectType();
         List<SObjectField> getSObjectFieldList();
