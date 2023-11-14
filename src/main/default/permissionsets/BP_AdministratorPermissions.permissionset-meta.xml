@@ -274,11 +274,6 @@
         <field>BP_Game__c.BP_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
-<!--    <fieldPermissions>-->
-<!--        <editable>true</editable>-->
-<!--        <field>BP_Game__c.BP_bggId__c</field>-->
-<!--        <readable>true</readable>-->
-<!--    </fieldPermissions>-->
     <fieldPermissions>
         <editable>true</editable>
         <field>BP_Gameplay__c.BP_Organizer__c</field>
@@ -382,6 +377,10 @@
     </tabSettings>
     <tabSettings>
         <tab>Games</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>BP_CollectionItem__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
