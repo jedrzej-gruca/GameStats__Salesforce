@@ -94,4 +94,17 @@
         <enabled>true</enabled>
         <name>ViewSetup</name>
     </userPermissions>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Account.BP_Publisher</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <layoutAssignments>
+        <layout>Account-Publisher Layout</layout>
+    </layoutAssignments>
+    <applicationVisibilities>
+        <application>BP_GameStatsApp</application>
+        <default>true</default>
+        <visible>true</visible>
+    </applicationVisibilities>
 </Profile>

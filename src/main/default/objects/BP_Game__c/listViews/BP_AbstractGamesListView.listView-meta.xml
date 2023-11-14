@@ -16,6 +16,7 @@
     </filters>
     <label>Abstract Games</label>
     <sharedTo>
+        <group>BP_GameCreatorGroup</group>
         <group>BP_GameOwnerGroup</group>
     </sharedTo>
 </ListView>

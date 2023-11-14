@@ -75,6 +75,24 @@
         <type>Flexipage</type>
         <profile>StandardAul</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>BP_PublisherRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.BP_Publisher</recordType>
+        <type>Flexipage</type>
+        <profile>Game Creator</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>BP_PublisherRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.BP_Publisher</recordType>
+        <type>Flexipage</type>
+        <profile>Game Creator</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>Games</tabs>
     <tabs>standard-Account</tabs>

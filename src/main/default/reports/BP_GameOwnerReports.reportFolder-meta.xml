@@ -5,5 +5,15 @@
         <sharedTo>jedrzej.gruca@bp.sandbox</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>BP_GameCreator</sharedTo>
+        <sharedToType>RoleAndSubordinates</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>BP_GameOwner</sharedTo>
+        <sharedToType>RoleAndSubordinates</sharedToType>
+    </folderShares>
     <name>Game Owner Reports</name>
 </ReportFolder>

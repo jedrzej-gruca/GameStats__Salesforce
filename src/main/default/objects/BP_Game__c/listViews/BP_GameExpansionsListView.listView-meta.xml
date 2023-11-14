@@ -16,6 +16,7 @@
     </filters>
     <label>Game Expansions</label>
     <sharedTo>
+        <group>BP_GameCreatorGroup</group>
         <group>BP_GameOwnerGroup</group>
     </sharedTo>
 </ListView>
