@@ -1,0 +1,50 @@
+<!--
+ - Created by Jedrzej Gruca on 15/11/2023.
+ -->
+
+<template>
+    <div class="slds-p-around_small slds-color__background_gray-1">
+        <template if:true={showLoader}>
+            <div class="slds-spinner_container slds-is-fixed">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </template>
+        <lightning-record-edit-form
+                object-api-name={objectApiName}
+                onsuccess={handleSuccess}
+                onload={handleLoad}
+                onerror={handleError}
+                onsubmit={handleSubmit}
+        >
+            <h3 class="slds-section-title_divider slds-m-bottom_small">Podaj informacje o grze</h3>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_1-of-2">
+                    <lightning-input-field name="Owner" field-name="BP_Owner__c" value={userId} ></lightning-input-field>
+                    <lightning-input-field name="Game" field-name="BP_Game__c" onchange={handleGameChanged} required="true"></lightning-input-field>
+                    <lightning-input-field name="Purchase Date" field-name="BP_PurchaseDate__c" required="true"></lightning-input-field>
+<!--                    <lightning-input-field name="Game" field-name="BP_Game__c" onchange={handleShopChanged} required="true"></lightning-input-field>-->
+                </div>
+                <div class="slds-col slds-p-around_small slds-size_1-of-1 slds-large-size_1-of-2">
+                    <lightning-input-field name="Game Condition" field-name="BP_GameCondition__c" onchange={handleGameConditionChanged} value={gameConditionApi} required></lightning-input-field>
+                    <template if:true={showDescription}>
+                        <lightning-input-field name="Condition description" field-name="BP_ConditionDetails__c"></lightning-input-field>
+                    </template>
+                </div>
+            </div>
+            <!-- hidden auto lookups-->
+            <lightning-input-field class="slds-hide" name="Collection Item Name" field-name="Name" value={generateName}></lightning-input-field>
+
+            <div class="buttons-container slds-grid slds-grid_align-end">
+                <div class="slds-col">
+                    <lightning-button class="slds-m-top_small" label="Reset" onclick={handleReset}></lightning-button>
+                    <lightning-button class="slds-m-top_small slds-m-left_small" type="submit" disabled={blockSaveButtons} onclick={handleSaveAndNew} label="Zapisz i dodaj nową" variant="brand"></lightning-button>
+                    <lightning-button class="slds-m-top_small slds-m-left_small" type="submit" disabled={blockSaveButtons} onclick={handleSave} label="Zapisz" variant="brand"></lightning-button>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </div>
+</template>

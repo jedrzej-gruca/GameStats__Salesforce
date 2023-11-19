@@ -94,6 +94,7 @@
         <profile>Game Creator</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
+    <tabs>Collection</tabs>
     <tabs>Games</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-report</tabs>
@@ -101,6 +102,9 @@
     <uiType>Lightning</uiType>
     <utilityBar>Game_Stats_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Collection</tab>
+        </mappings>
         <mappings>
             <tab>Games</tab>
         </mappings>
