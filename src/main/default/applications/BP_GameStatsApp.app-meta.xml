@@ -93,7 +93,17 @@
         <type>Flexipage</type>
         <profile>Game Creator</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>BP_PublisherRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.BP_Publisher</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
+    <tabs>Gameplay</tabs>
     <tabs>Collection</tabs>
     <tabs>Games</tabs>
     <tabs>standard-Account</tabs>
@@ -104,6 +114,9 @@
     <workspaceConfig>
         <mappings>
             <tab>Collection</tab>
+        </mappings>
+        <mappings>
+            <tab>Gameplay</tab>
         </mappings>
         <mappings>
             <tab>Games</tab>
