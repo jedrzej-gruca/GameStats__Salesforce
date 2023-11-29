@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BP_MyGameplays</fullName>
+    <columns>NAME</columns>
+    <columns>BP_Game__c</columns>
+    <columns>BP_Organizer__c</columns>
+    <columns>BP_PlayDate__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>My Gameplays</label>
+</ListView>
