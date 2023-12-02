@@ -105,5 +105,9 @@
         <members>*</members>
         <name>DuplicateRule</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>ReportType</name>
+    </types>
     <version>58.0</version>
 </Package>

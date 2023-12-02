@@ -52,5 +52,6 @@ public with sharing class BP_GameSelector extends fflib_SObjectSelector implemen
         List<SObjectField> getSObjectFieldList();
         List<BP_Game__c> selectById(Set<Id> ids);
         List<BP_Game__c> selectByIdAndHasExpansion(Set<Id> ids, Boolean hasExpansion);
+        List<BP_Game__c> selectByPublisherId(Set<Id> ids);
     }
 }

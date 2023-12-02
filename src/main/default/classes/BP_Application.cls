@@ -22,7 +22,9 @@ public with sharing class BP_Application {
                     new Map<SObjectType, Type>{
                         BP_Game__c.SObjectType => BP_GameSelector.class,
                         Account.SObjectType => BP_AccountSelector.class,
-                        BP_CollectionItem__c.SObjectType => BP_CollectionItemSelector.class
+                        BP_CollectionItem__c.SObjectType => BP_CollectionItemSelector.class,
+                        BP_Gameplay__c.SObjectType => BP_GameplaySelector.class,
+                        BP_Score__c.SObjectType => BP_ScoreSelector.class
                     }
             );
 
@@ -31,7 +33,8 @@ public with sharing class BP_Application {
                     BP_Application.selector,
                     new Map<SObjectType, Type>{
                         BP_Game__c.SObjectType => BP_Games.Constructor.class,
-                        Account.SObjectType => BP_Accounts.Constructor.class
+                        Account.SObjectType => BP_Accounts.Constructor.class,
+                        BP_Score__c.SObjectType => BP_Scores.Constructor.class
                     }
             );
 

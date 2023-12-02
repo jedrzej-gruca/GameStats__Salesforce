@@ -291,6 +291,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>BP_Gameplay__c.BP_Winner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>BP_Gameplay__c.BP_PlayDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
