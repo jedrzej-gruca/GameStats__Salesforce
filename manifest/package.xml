@@ -87,6 +87,18 @@
     <types>
         <members>BP_GameOwnerReports</members>
         <members>BP_GameOwnerReports/BP_NumberOfGamesPerTypeReport</members>
+        <members>GameplayReports</members>
+        <members>GameplayReports/BP_AvaragePointsPerGame</members>
+        <members>GameplayReports/BP_GameplayPerGame</members>
+        <members>GameplayReports/BP_GameplayPerGameType</members>
+        <members>GameplayReports/BP_GameplayPerOrganizer</members>
+        <members>GameplayReports/BP_GameplayPerPlayer</members>
+        <members>GameplayReports/BP_GameplayPerWinner</members>
+        <members>BP_CollectionItemReports</members>
+        <members>BP_CollectionItemReports/BP_NewGamesPerPublishedYear</members>
+        <members>BP_CollectionItemReports/BP_NewGamesPerType</members>
+        <members>BP_CollectionItemReports/BP_NumberOfNewBaseGamesInCollection</members>
+        <members>BP_CollectionItemReports/BP_NumberOfNewExpansionsInCollection</members>
         <name>Report</name>
     </types>
     <types>
@@ -108,6 +120,12 @@
     <types>
         <members>*</members>
         <name>ReportType</name>
+    </types>
+    <types>
+        <members>BP_GameOwnerDashboards</members>
+        <members>BP_GameOwnerDashboards/cvXLRcSWtHHVzubwGxNTyNPELwcNbe</members>
+        <members>BP_GameOwnerDashboards/lCbrzrmiMfbIpUQMJTeMGSztMtJyRu</members>
+        <name>Dashboard</name>
     </types>
     <version>58.0</version>
 </Package>

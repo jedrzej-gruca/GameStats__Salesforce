@@ -8,7 +8,7 @@ public with sharing class BP_Scores extends fflib_SObjectDomain {
         super(sObjectList);
     }
 
-    public class Constructor implements fflib_sObjectDomain.IConstructable {
+    public class Constructor implements fflib_SObjectDomain.IConstructable {
         public fflib_SObjectDomain construct(List<SObject> sObjectList) {
             return new BP_Scores(sObjectList);
         }
