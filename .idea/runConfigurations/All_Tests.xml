@@ -4,7 +4,7 @@
     <option name="allowRunningInParallel" value="false" />
     <option name="apexLogLevel" value="DEBUG" />
     <option name="calloutsLogLevel" value="INFO" />
-    <option name="connectionName" value="BachelorsProject" />
+    <option name="connectionName" value="GameStats" />
     <option name="connectionType" value="OAUTH" />
     <option name="contextConfiguration" value="false" />
     <option name="databaseLogLevel" value="INFO" />

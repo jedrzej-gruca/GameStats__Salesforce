@@ -24,15 +24,6 @@
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>BP_PublisherRecordPage</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.BP_Publisher</recordType>
-        <type>Flexipage</type>
-        <profile>Standard</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>BP_PublisherRecordPage</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.BP_Publisher</recordType>

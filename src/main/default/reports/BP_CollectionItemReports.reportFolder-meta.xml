@@ -5,5 +5,10 @@
         <sharedTo>jedrzej.gruca@bp.sandbox</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>CEO</sharedTo>
+        <sharedToType>RoleAndSubordinates</sharedToType>
+    </folderShares>
     <name>Collection Item Reports</name>
 </ReportFolder>

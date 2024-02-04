@@ -195,7 +195,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Collection_Item.BP_Game__r.Id</elementReference>
+                <elementReference>Get_Collection_Item.BP_GameLookup__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -372,7 +372,7 @@
             <targetReference>Start_Screen</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>Gameplay_To_Create</name>
         <dataType>SObject</dataType>

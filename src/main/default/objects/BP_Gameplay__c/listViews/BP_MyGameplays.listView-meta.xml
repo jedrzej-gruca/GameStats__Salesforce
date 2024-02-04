@@ -5,6 +5,6 @@
     <columns>BP_Game__c</columns>
     <columns>BP_Organizer__c</columns>
     <columns>BP_PlayDate__c</columns>
-    <filterScope>Everything</filterScope>
+    <filterScope>Mine</filterScope>
     <label>My Gameplays</label>
 </ListView>

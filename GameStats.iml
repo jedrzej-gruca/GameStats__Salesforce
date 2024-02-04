@@ -3,7 +3,7 @@
   <component name="FacetManager">
     <facet type="IlluminatedCloud" name="Illuminated Cloud">
       <configuration>
-        <option name="connectionName" value="BachelorsProject" />
+        <option name="connectionName" value="GameStats" />
         <option name="connectionType" value="OAUTH" />
         <option name="defaultSourceRootUrl" value="file://$MODULE_DIR$/src/main/default" />
         <option name="moduleContents">
@@ -25,7 +25,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.sfdx" />
       <excludeFolder url="file://$MODULE_DIR$/src/utils" />
     </content>
-    <orderEntry type="jdk" jdkName="IlluminatedCloud (GameStats/BachelorsProject)" jdkType="IlluminatedCloud" />
+    <orderEntry type="jdk" jdkName="IlluminatedCloud (GameStats/GameStats)" jdkType="IlluminatedCloud" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -7,12 +7,7 @@
     </folderShares>
     <folderShares>
         <accessLevel>View</accessLevel>
-        <sharedTo>BP_GameCreator</sharedTo>
-        <sharedToType>RoleAndSubordinates</sharedToType>
-    </folderShares>
-    <folderShares>
-        <accessLevel>View</accessLevel>
-        <sharedTo>BP_GameOwner</sharedTo>
+        <sharedTo>CEO</sharedTo>
         <sharedToType>RoleAndSubordinates</sharedToType>
     </folderShares>
     <name>Game Owner Reports</name>

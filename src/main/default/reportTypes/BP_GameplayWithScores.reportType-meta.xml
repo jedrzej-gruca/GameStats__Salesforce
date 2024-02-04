@@ -70,6 +70,11 @@
             <field>BP_Game__c.BP_Game__c.BP_Type__c</field>
             <table>BP_Gameplay__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_Game__c.BP_Owner__c</field>
+            <table>BP_Gameplay__c</table>
+        </columns>
         <masterLabel>Gameplays</masterLabel>
     </sections>
     <sections>

@@ -45,6 +45,15 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>BP_Gameplay__c.Scores__r$BP_Value__c</field>
     </columns>
+    <filter>
+        <criteriaItems>
+            <column>BP_Gameplay__c$BP_Game__c.BP_Owner__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>$USER</value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

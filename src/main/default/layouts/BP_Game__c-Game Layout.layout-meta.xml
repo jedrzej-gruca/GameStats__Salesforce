@@ -40,10 +40,6 @@
                 <behavior>Edit</behavior>
                 <field>BP_Mechanic__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>BP_NumberOfOwners__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

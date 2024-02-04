@@ -10,15 +10,7 @@
     <dashboardFilters>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>LAST_WEEK</values>
-        </dashboardFilterOptions>
-        <dashboardFilterOptions>
-            <operator>equals</operator>
-            <values>LAST_MONTH</values>
-        </dashboardFilterOptions>
-        <dashboardFilterOptions>
-            <operator>equals</operator>
-            <values>THIS_WEEK</values>
+            <values>THIS_YEAR</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
@@ -26,7 +18,11 @@
         </dashboardFilterOptions>
         <dashboardFilterOptions>
             <operator>equals</operator>
-            <values>THIS_YEAR</values>
+            <values>THIS_WEEK</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>LAST_YEAR</values>
         </dashboardFilterOptions>
         <name>Purchase Date</name>
     </dashboardFilters>
@@ -46,14 +42,14 @@
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Liczba nowy gier</header>
+                <header>Liczba nowych gier</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
                 <indicatorHighColor>#FFFFFF</indicatorHighColor>
                 <indicatorLowColor>#FFFFFF</indicatorLowColor>
                 <indicatorMiddleColor>#FFFFFF</indicatorMiddleColor>
                 <metricLabel>w kolekcji</metricLabel>
-                <report>BP_CollectionItemReports/BP_NumberOfNewBaseGamesInCollection</report>
+                <report>BP_CollectionItemReports/BP_NumberOfNewBaseGamesInCollectionNew</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -79,23 +75,21 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>BP_Game__c.BP_Type__c</groupingColumn>
+                <groupingColumn>FK_$BP_Game__c.BP_Type__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortColumn>RowCount</sortColumn>
-                        <sortOrder>d</sortOrder>
+                        <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Nowe Gry</header>
+                <header>New Games per Type - new</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>BP_CollectionItemReports/BP_NewGamesPerType</report>
+                <report>BP_CollectionItemReports/BP_GameplayPerGameTypeNew</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>per kategoria</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -121,21 +115,20 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>BP_Game__c.BP_PublishedYear__c</groupingColumn>
+                <groupingColumn>FK_$BP_Game__c.BP_PublishedYear__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortOrder>d</sortOrder>
+                        <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Nowe Gry</header>
+                <header>New Games per Published Year - new</header>
                 <legendPosition>Right</legendPosition>
-                <report>BP_CollectionItemReports/BP_NewGamesPerPublishedYear</report>
+                <report>BP_CollectionItemReports/BP_NewGamesPerPublishedYearNew</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>per rok wydania</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -163,7 +156,7 @@
                 <indicatorLowColor>#FFFFFF</indicatorLowColor>
                 <indicatorMiddleColor>#FFFFFF</indicatorMiddleColor>
                 <metricLabel>w kolekcji</metricLabel>
-                <report>BP_CollectionItemReports/BP_NumberOfNewExpansionsInCollection</report>
+                <report>BP_CollectionItemReports/BP_NumberOfNewExpansionsInCollectionNew</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>5</rowIndex>

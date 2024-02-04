@@ -20,7 +20,7 @@ public with sharing class BP_CollectionItemSelector extends fflib_SObjectSelecto
         return new List<Schema.SObjectField>{
                 BP_CollectionItem__c.Id,
                 BP_CollectionItem__c.Name,
-                BP_CollectionItem__c.BP_Game__c,
+                BP_CollectionItem__c.BP_GameLookup__c,
                 BP_CollectionItem__c.BP_GameCondition__c,
                 BP_CollectionItem__c.BP_ConditionDetails__c,
                 BP_CollectionItem__c.BP_Owner__c,

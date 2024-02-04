@@ -14,7 +14,7 @@
             <relationship>Game_Plays__r</relationship>
         </join>
         <outerJoin>false</outerJoin>
-        <relationship>Collection_Items__r</relationship>
+        <relationship>Collection_Items_Lookup__r</relationship>
     </join>
     <label>Games with Collection Items with Gameplays with Gameplay Players</label>
     <sections>
@@ -90,11 +90,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>BP_NumberOfOwners__c</field>
-            <table>BP_Game__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>BP_Category__c</field>
             <table>BP_Game__c</table>
         </columns>
@@ -144,139 +139,164 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>BP_Game__c.Collection_Items__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
+            <checkedByDefault>false</checkedByDefault>
             <field>Name</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>BP_NumberOfPlays__c</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>BP_Owner__c</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>BP_GameCondition__c</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>BP_PurchaseDate__c</field>
-            <table>BP_Game__c.Collection_Items__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>BP_ConditionDetails__c</field>
-            <table>BP_Game__c.Collection_Items__r</table>
-        </columns>
-        <masterLabel>Collection Items</masterLabel>
-    </sections>
-    <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
+            <field>CreatedDate</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_GameLookup__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_GameCondition__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_NumberOfPlays__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_Owner__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_PurchaseDate__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r</table>
+        </columns>
+        <masterLabel>Collection Item</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_Game__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>BP_Organizer__c</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>BP_PlayDate__c</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BP_Winner__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r</table>
         </columns>
         <masterLabel>Gameplays</masterLabel>
     </sections>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
+            <field>CreatedBy</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedDate</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
+            <field>BP_Gameplay__c</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
+            <field>Id</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>BP_Player__c</field>
-            <table>BP_Game__c.Collection_Items__r.Game_Plays__r.Gameplay_Players__r</table>
+            <table>BP_Game__c.Collection_Items_Lookup__r.Game_Plays__r.Gameplay_Players__r</table>
         </columns>
-        <masterLabel>Gameplay Players</masterLabel>
+        <masterLabel>Gameplay Player</masterLabel>
     </sections>
 </ReportType>

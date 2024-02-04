@@ -216,6 +216,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>BP_CollectionItem__c.BP_GameLookup__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>BP_Game__c.BP_BggSite__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -257,11 +262,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>BP_Game__c.BP_MinimumPlaytimeInMinutes__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>BP_Game__c.BP_NumberOfOwners__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

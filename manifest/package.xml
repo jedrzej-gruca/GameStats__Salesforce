@@ -94,11 +94,10 @@
         <members>GameplayReports/BP_GameplayPerOrganizer</members>
         <members>GameplayReports/BP_GameplayPerPlayer</members>
         <members>GameplayReports/BP_GameplayPerWinner</members>
-        <members>BP_CollectionItemReports</members>
-        <members>BP_CollectionItemReports/BP_NewGamesPerPublishedYear</members>
-        <members>BP_CollectionItemReports/BP_NewGamesPerType</members>
-        <members>BP_CollectionItemReports/BP_NumberOfNewBaseGamesInCollection</members>
-        <members>BP_CollectionItemReports/BP_NumberOfNewExpansionsInCollection</members>
+        <members>BP_CollectionItemReports/BP_GameplayPerGameTypeNew</members>
+        <members>BP_CollectionItemReports/BP_NewGamesPerPublishedYearNew</members>
+        <members>BP_CollectionItemReports/BP_NumberOfNewExpansionsInCollectionNew</members>
+        <members>BP_CollectionItemReports/BP_NumberOfNewBaseGamesInCollectionNew</members>
         <name>Report</name>
     </types>
     <types>

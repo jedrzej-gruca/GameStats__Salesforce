@@ -8,15 +8,16 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBar</chartType>
+        <chartType>Donut</chartType>
         <enableHoverLabels>false</enableHoverLabels>
-        <expandOthers>true</expandOthers>
-        <groupingColumn>CHILD_NAME</groupingColumn>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>FK_$BP_Game__c.BP_PublishedYear__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>false</showAxisLabels>
         <showPercentage>false</showPercentage>
-        <showTotal>false</showTotal>
-        <showValues>false</showValues>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -25,35 +26,54 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>CUST_NAME</field>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$BP_Game__c.BP_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$BP_Game__c.BP_IsExpansion__c</field>
+    </columns>
+    <columns>
+        <field>FK_$BP_Game__c.BP_ExpansionFor__c</field>
+    </columns>
+    <columns>
+        <field>BP_CollectionItem__c.BP_PurchaseDate__c</field>
+    </columns>
+    <columns>
+        <field>BP_CollectionItem__c.BP_GameCondition__c</field>
+    </columns>
+    <columns>
+        <field>BP_CollectionItem__c.BP_ConditionDetails__c</field>
     </columns>
     <filter>
         <criteriaItems>
-            <column>BP_Game__c.BP_IsExpansion__c</column>
+            <column>BP_CollectionItem__c.BP_Owner__c</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>0</value>
+            <value>$USER</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>CHILD_NAME</field>
+        <field>FK_$BP_Game__c.BP_PublishedYear__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Number of New Base Games in Collection</name>
+    <name>New Games per Published Year - new</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>CustomEntityCustomEntity$BP_Game__c$BP_CollectionItem__c</reportType>
+    <reportType>CustomEntity$BP_CollectionItem__c@BP_CollectionItem__c.BP_GameLookup__c</reportType>
     <scope>user</scope>
     <showDetails>true</showDetails>
-    <showGrandTotal>false</showGrandTotal>
-    <showSubTotals>false</showSubTotals>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
-        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <dateColumn>BP_CollectionItem__c.BP_PurchaseDate__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>
