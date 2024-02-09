@@ -5,18 +5,18 @@
         <backgroundColor2>#FFFFFF</backgroundColor2>
         <backgroundFadeDir>Diagonal</backgroundFadeDir>
         <chartSummaries>
-            <aggregate>Unique</aggregate>
             <axisBinding>y</axisBinding>
-            <column>BP_Gameplay__c$Name</column>
+            <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBar</chartType>
+        <chartType>Donut</chartType>
         <enableHoverLabels>false</enableHoverLabels>
-        <expandOthers>true</expandOthers>
-        <groupingColumn>BP_Gameplay__c$BP_Game__c.BP_Game__c.BP_Type__c</groupingColumn>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>BP_Gameplay__c$BP_Game__c.BP_GameLookup__c.BP_Type__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
-        <showTotal>false</showTotal>
+        <showTotal>true</showTotal>
         <showValues>true</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
@@ -26,11 +26,7 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>BP_Gameplay__c$BP_Game__c</field>
-    </columns>
-    <columns>
-        <aggregateTypes>Unique</aggregateTypes>
-        <field>BP_Gameplay__c$Name</field>
+        <field>BP_Gameplay__c$BP_Game__c.BP_GameLookup__c.Name</field>
     </columns>
     <columns>
         <field>BP_Gameplay__c$BP_Organizer__c</field>
@@ -45,19 +41,10 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>BP_Gameplay__c.Scores__r$BP_Value__c</field>
     </columns>
-    <filter>
-        <criteriaItems>
-            <column>BP_Gameplay__c$BP_Game__c.BP_Owner__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>$USER</value>
-        </criteriaItems>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>BP_Gameplay__c$BP_Game__c.BP_Game__c.BP_Type__c</field>
+        <field>BP_Gameplay__c$BP_Game__c.BP_GameLookup__c.BP_Type__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Gameplay per Game Type</name>
@@ -70,8 +57,6 @@
     <showDetails>true</showDetails>
     <showGrandTotal>false</showGrandTotal>
     <showSubTotals>false</showSubTotals>
-    <sortColumn>BP_Gameplay__c$Name</sortColumn>
-    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>BP_Gameplay__c$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>

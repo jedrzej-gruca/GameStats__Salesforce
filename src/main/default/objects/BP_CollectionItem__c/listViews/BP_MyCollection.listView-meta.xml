@@ -2,7 +2,6 @@
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>BP_MyCollection</fullName>
     <columns>NAME</columns>
-    <columns>BP_Game__c</columns>
     <columns>BP_NumberOfPlays__c</columns>
     <columns>BP_GameCondition__c</columns>
     <columns>BP_PurchaseDate__c</columns>

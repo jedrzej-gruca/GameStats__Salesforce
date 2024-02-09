@@ -124,7 +124,8 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
                 } else {
                     publishersIdsToUpdateMap.put(BASE_GAME_STATUS, new Map<Id, Integer>{publisherId => publisherIdToGameListMap.get(publisherId).get(BASE_GAME_STATUS).size()});
                 }
-            } else if (publisherIdToGameListMap.get(publisherId).containsKey(EXPANSION_GAME_STATUS) &&
+            }
+            if (publisherIdToGameListMap.get(publisherId).containsKey(EXPANSION_GAME_STATUS) &&
                     publisherMap.get(publisherId).BP_NumberOfExpansions__c != publisherIdToGameListMap.get(publisherId).get(EXPANSION_GAME_STATUS).size()) {
                 if (publishersIdsToUpdateMap.containsKey(EXPANSION_GAME_STATUS)) {
                     publishersIdsToUpdateMap.get(EXPANSION_GAME_STATUS).put(publisherId, publisherIdToGameListMap.get(publisherId).get(EXPANSION_GAME_STATUS).size());
@@ -142,7 +143,10 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
             if (gm.BP_Publisher__c != null) {
                 publisherIds.add(gm.BP_Publisher__c);
             }
-            if (existingRecords != null && !existingRecords.isEmpty() && existingRecords.get(gm.Id).BP_Publisher__c != gm.BP_Publisher__c) {
+            if (existingRecords != null
+                    && !existingRecords.isEmpty()
+                    && existingRecords.get(gm.Id)?.BP_Publisher__c != null
+                    && existingRecords.get(gm.Id)?.BP_Publisher__c != gm?.BP_Publisher__c) {
                 publisherIds.add(existingRecords.get(gm.Id).BP_Publisher__c);
             }
         }
@@ -159,11 +163,11 @@ public with sharing class BP_Games extends fflib_SObjectDomain {
             for (Account acc : publishersToUpdateMap.values()) {
                 if (publishersIdsToUpdateMap.containsKey(BASE_GAME_STATUS) && publishersIdsToUpdateMap.get(BASE_GAME_STATUS).containsKey(acc.Id)) {
                     acc.BP_NumberOfGames__c = publishersIdsToUpdateMap.get(BASE_GAME_STATUS).get(acc.Id);
-                    uow.registerDirty(acc);
-                } else if (publishersIdsToUpdateMap.containsKey(EXPANSION_GAME_STATUS) && publishersIdsToUpdateMap.get(EXPANSION_GAME_STATUS).containsKey(acc.Id)) {
-                        acc.BP_NumberOfExpansions__c = publishersIdsToUpdateMap.get(EXPANSION_GAME_STATUS).get(acc.Id);
-                        uow.registerDirty(acc);
                 }
+                if (publishersIdsToUpdateMap.containsKey(EXPANSION_GAME_STATUS) && publishersIdsToUpdateMap.get(EXPANSION_GAME_STATUS).containsKey(acc.Id)) {
+                        acc.BP_NumberOfExpansions__c = publishersIdsToUpdateMap.get(EXPANSION_GAME_STATUS).get(acc.Id);
+                }
+                uow.registerDirty(acc);
             }
         }
         uow.commitWork();

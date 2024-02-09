@@ -108,11 +108,10 @@
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
-                    <aggregate>Unique</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>BP_Gameplay__c$Name</column>
+                    <column>RowCount</column>
                 </chartSummary>
-                <componentType>Bar</componentType>
+                <componentType>Donut</componentType>
                 <dashboardFilterColumns>
                     <column>BP_Gameplay__c$BP_PlayDate__c</column>
                 </dashboardFilterColumns>
@@ -122,19 +121,22 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
+                <groupingColumn>BP_Gameplay__c$BP_Game__c.BP_GameLookup__c.BP_Type__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortOrder>d</sortOrder>
+                        <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Gameplay per Game Type</header>
-                <legendPosition>Bottom</legendPosition>
+                <header>Liczba rozgrywek</header>
+                <legendPosition>Right</legendPosition>
+                <maxValuesDisplayed>6</maxValuesDisplayed>
                 <report>GameplayReports/BP_GameplayPerGameType</report>
                 <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
+                <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
+                <title>per typ gry</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
